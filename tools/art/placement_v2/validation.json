@@ -1,0 +1,126 @@
+{
+  "tests": [
+    {
+      "name": "bridge_vertical",
+      "passed": 12,
+      "total": 12
+    },
+    {
+      "name": "stone_arch_bridge",
+      "passed": 12,
+      "total": 12
+    },
+    {
+      "name": "rope_bridge",
+      "passed": 12,
+      "total": 12
+    },
+    {
+      "name": "garden_bridge",
+      "passed": 12,
+      "total": 12
+    }
+  ],
+  "examples": [
+    {
+      "seed": 2701,
+      "name": "bridge_vertical",
+      "bridge": [
+        493,
+        308
+      ],
+      "buildings": [
+        [
+          760,
+          64
+        ],
+        [
+          184,
+          568
+        ],
+        [
+          280,
+          160
+        ]
+      ],
+      "props": 40
+    },
+    {
+      "seed": 2701,
+      "name": "stone_arch_bridge",
+      "bridge": [
+        459,
+        298
+      ],
+      "buildings": [
+        [
+          184,
+          280
+        ],
+        [
+          760,
+          424
+        ],
+        [
+          280,
+          616
+        ]
+      ],
+      "props": 44
+    },
+    {
+      "seed": 2701,
+      "name": "rope_bridge",
+      "bridge": [
+        461,
+        304
+      ],
+      "buildings": [
+        [
+          184,
+          280
+        ],
+        [
+          760,
+          424
+        ],
+        [
+          280,
+          616
+        ]
+      ],
+      "props": 44
+    },
+    {
+      "seed": 2701,
+      "name": "garden_bridge",
+      "bridge": [
+        468,
+        287
+      ],
+      "buildings": [
+        [
+          184,
+          280
+        ],
+        [
+          760,
+          424
+        ],
+        [
+          280,
+          616
+        ]
+      ],
+      "props": 44
+    }
+  ],
+  "limitations": [
+    "有限区域独立于正式地表算法",
+    "道路仅中心线验证，未验证宽度碰撞",
+    "遮挡为人工多边形裁切，非独立绘制图层",
+    "水车未加入随机布置",
+    "未运行浏览器/Phaser截图与视觉验收",
+    "未验证跨chunk和完整地形材质组合"
+  ]
+}
