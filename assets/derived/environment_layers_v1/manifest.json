@@ -1,0 +1,425 @@
+{
+  "version": 1,
+  "status": "derived-visible-pixel-candidates",
+  "assets": [
+    {
+      "name": "cottage",
+      "source": "assets/candidates/environment_v1/sprites/cottage.png",
+      "sourceSHA": "713b2072192b5197e82568ac29186034686fb9c7",
+      "canvas": [
+        192,
+        192
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "exactVisibleRGBA": true,
+      "disjoint": true,
+      "visiblePixels": 21952,
+      "layers": [
+        {
+          "part": "base",
+          "path": "cottage_base.png",
+          "pixels": 12035,
+          "sha": "18ab36b60669c271fac92f7f07fa7ac864149fd9"
+        },
+        {
+          "part": "roof",
+          "path": "cottage_roof.png",
+          "pixels": 9917,
+          "sha": "9bb2df3a8737939b7662093fe2fabdd3f6db2c5b"
+        }
+      ]
+    },
+    {
+      "name": "blue_roof_shop",
+      "source": "assets/source/environment/environment_v4/blue_roof_shop.png",
+      "sourceSHA": "e52ed50a7c59b8e2d2f45e22da136645f18b79f6",
+      "canvas": [
+        192,
+        160
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "exactVisibleRGBA": true,
+      "disjoint": true,
+      "visiblePixels": 16699,
+      "layers": [
+        {
+          "part": "base",
+          "path": "blue_roof_shop_base.png",
+          "pixels": 9433,
+          "sha": "a8dade14c7c698c20b01e1d5664bd51a49479413"
+        },
+        {
+          "part": "roof",
+          "path": "blue_roof_shop_roof.png",
+          "pixels": 7266,
+          "sha": "c0acaf2905791d14393a0c8eedd3c21d42835f46"
+        }
+      ]
+    },
+    {
+      "name": "watermill",
+      "source": "assets/source/environment/environment_v4/watermill.png",
+      "sourceSHA": "e2732cf16a066d2cb1f32034cf2089bd7cd2832d",
+      "canvas": [
+        176,
+        152
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "exactVisibleRGBA": true,
+      "disjoint": true,
+      "visiblePixels": 14617,
+      "layers": [
+        {
+          "part": "base",
+          "path": "watermill_base.png",
+          "pixels": 10193,
+          "sha": "579fb67d7b5cadb93a3ee3abb30964fa4e46567a"
+        },
+        {
+          "part": "roof",
+          "path": "watermill_roof.png",
+          "pixels": 4424,
+          "sha": "140500701e1cc46a7e0d97c066d9690805ebd213"
+        }
+      ]
+    },
+    {
+      "name": "market_stall",
+      "source": "assets/source/environment/environment_v4/market_stall.png",
+      "sourceSHA": "f351fb28815602dd345b3ddd68cce242378e8d04",
+      "canvas": [
+        96,
+        88
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "exactVisibleRGBA": true,
+      "disjoint": true,
+      "visiblePixels": 3501,
+      "layers": [
+        {
+          "part": "base",
+          "path": "market_stall_base.png",
+          "pixels": 2335,
+          "sha": "f96b1ecb3baa29fe60c3beef8e62fc797a3116ca"
+        },
+        {
+          "part": "roof",
+          "path": "market_stall_roof.png",
+          "pixels": 1166,
+          "sha": "7c8d10d80900a6d4b0e7ca3d092ee208b2ccda1b"
+        }
+      ]
+    },
+    {
+      "name": "watchtower",
+      "source": "assets/source/environment/environment_v4/watchtower.png",
+      "sourceSHA": "659e234c3475d4ec911bace7cf860cbec4e29424",
+      "canvas": [
+        112,
+        160
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "exactVisibleRGBA": true,
+      "disjoint": true,
+      "visiblePixels": 8428,
+      "layers": [
+        {
+          "part": "base",
+          "path": "watchtower_base.png",
+          "pixels": 7584,
+          "sha": "a6503744ffb879c8f533b1f0bfdcc6c2bc10a477"
+        },
+        {
+          "part": "roof",
+          "path": "watchtower_roof.png",
+          "pixels": 844,
+          "sha": "98f52d3b5a715e9ec9c7e28fc067b9a3acb870df"
+        }
+      ]
+    },
+    {
+      "name": "oak_mature",
+      "source": "assets/candidates/environment_v1/sprites/oak_mature.png",
+      "sourceSHA": "f1c6b3cc9a844165432f903e8b7a017440f3ee57",
+      "canvas": [
+        96,
+        128
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "exactVisibleRGBA": true,
+      "disjoint": true,
+      "visiblePixels": 4983,
+      "layers": [
+        {
+          "part": "trunk",
+          "path": "oak_mature_trunk.png",
+          "pixels": 749,
+          "sha": "a300d368a4a5eab1b596e119a72036b41e1f2cd8"
+        },
+        {
+          "part": "canopy",
+          "path": "oak_mature_canopy.png",
+          "pixels": 4234,
+          "sha": "b0c8c5e3eb1f6b5980cc720caf1d7236b5708baf"
+        }
+      ]
+    },
+    {
+      "name": "pine_mature",
+      "source": "assets/candidates/environment_v1/sprites/pine_mature.png",
+      "sourceSHA": "388cf5ab21575745f09b17be09bb4d04460297fb",
+      "canvas": [
+        64,
+        96
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "exactVisibleRGBA": true,
+      "disjoint": true,
+      "visiblePixels": 2517,
+      "layers": [
+        {
+          "part": "trunk",
+          "path": "pine_mature_trunk.png",
+          "pixels": 144,
+          "sha": "08f049214d35f9794e40716c0e39003d064d0f7b"
+        },
+        {
+          "part": "canopy",
+          "path": "pine_mature_canopy.png",
+          "pixels": 2373,
+          "sha": "387756c2c14173163f19a6db07933ab2c672a5f2"
+        }
+      ]
+    },
+    {
+      "name": "birch_mature",
+      "source": "assets/candidates/environment_v1/sprites/birch_mature.png",
+      "sourceSHA": "23d526ca51eaca170e30d59dd7764337188a7d6d",
+      "canvas": [
+        96,
+        128
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "exactVisibleRGBA": true,
+      "disjoint": true,
+      "visiblePixels": 5051,
+      "layers": [
+        {
+          "part": "trunk",
+          "path": "birch_mature_trunk.png",
+          "pixels": 598,
+          "sha": "62eaa0f740b5e2e93ac9b2e7ba73d5984f1d3a40"
+        },
+        {
+          "part": "canopy",
+          "path": "birch_mature_canopy.png",
+          "pixels": 4453,
+          "sha": "9f80f62608387ca9ae0c57920099b698a0114354"
+        }
+      ]
+    },
+    {
+      "name": "willow_mature",
+      "source": "assets/candidates/environment_v1/sprites/willow_mature.png",
+      "sourceSHA": "e47d0213417dfaba59dc4d95b4b3947dd7bedb0b",
+      "canvas": [
+        96,
+        128
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "exactVisibleRGBA": true,
+      "disjoint": true,
+      "visiblePixels": 4639,
+      "layers": [
+        {
+          "part": "trunk",
+          "path": "willow_mature_trunk.png",
+          "pixels": 629,
+          "sha": "c3df9b5863f36e89fbdc12fd128cb28a72228ee2"
+        },
+        {
+          "part": "canopy",
+          "path": "willow_mature_canopy.png",
+          "pixels": 4010,
+          "sha": "3e47dbc63a4b896cee1df1906d722b31317f7bff"
+        }
+      ]
+    },
+    {
+      "name": "bridge_vertical",
+      "source": "assets/candidates/environment_v1/sprites/bridge_vertical.png",
+      "sourceSHA": "a234a86bf1ff87b191bc4c2ac8bd3cd824397423",
+      "canvas": [
+        96,
+        96
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "exactVisibleRGBA": true,
+      "disjoint": true,
+      "visiblePixels": 4858,
+      "layers": [
+        {
+          "part": "back_rail",
+          "path": "bridge_vertical_back_rail.png",
+          "pixels": 553,
+          "sha": "abb65490c3688bc3a37dc3562977f1c91bd0d7a0"
+        },
+        {
+          "part": "deck",
+          "path": "bridge_vertical_deck.png",
+          "pixels": 2472,
+          "sha": "6715a7629333ad0e5c66efee833107e1cb65cd9c"
+        },
+        {
+          "part": "front_rail",
+          "path": "bridge_vertical_front_rail.png",
+          "pixels": 1833,
+          "sha": "79f197167cd70edec13112facce32063f198f37b"
+        }
+      ]
+    },
+    {
+      "name": "stone_arch_bridge",
+      "source": "assets/source/environment/environment_v4/stone_arch_bridge.png",
+      "sourceSHA": "b4c984d7c3d7a1ebc12e69aeff683f34c274b8d1",
+      "canvas": [
+        160,
+        112
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "exactVisibleRGBA": true,
+      "disjoint": true,
+      "visiblePixels": 5839,
+      "layers": [
+        {
+          "part": "back_rail",
+          "path": "stone_arch_bridge_back_rail.png",
+          "pixels": 878,
+          "sha": "3e979fb6452ad9a34c5499d4e68b98416cf13c4c"
+        },
+        {
+          "part": "deck",
+          "path": "stone_arch_bridge_deck.png",
+          "pixels": 3477,
+          "sha": "a67b1291a0f0530f4d7ca9917dc3232d4e0ebf79"
+        },
+        {
+          "part": "front_rail",
+          "path": "stone_arch_bridge_front_rail.png",
+          "pixels": 1484,
+          "sha": "6af6b155ab9afd2c54e383b0e7999caa592d60c8"
+        }
+      ]
+    },
+    {
+      "name": "rope_bridge",
+      "source": "assets/source/environment/environment_v4/rope_bridge.png",
+      "sourceSHA": "4c539e76b197f56b86fbb0c22e366ad694fc31d0",
+      "canvas": [
+        152,
+        100
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "exactVisibleRGBA": true,
+      "disjoint": true,
+      "visiblePixels": 4472,
+      "layers": [
+        {
+          "part": "back_rail",
+          "path": "rope_bridge_back_rail.png",
+          "pixels": 780,
+          "sha": "f59f5c8b5db44c2213cbf3dd295fa6d95de412ac"
+        },
+        {
+          "part": "deck",
+          "path": "rope_bridge_deck.png",
+          "pixels": 2433,
+          "sha": "d9cbaa1a2bea92124a02d9b27cc2738c5f6d6fa0"
+        },
+        {
+          "part": "front_rail",
+          "path": "rope_bridge_front_rail.png",
+          "pixels": 1259,
+          "sha": "b2e68d9336dfcebdc6356173dd581b35a2871967"
+        }
+      ]
+    },
+    {
+      "name": "garden_bridge",
+      "source": "assets/source/environment/environment_v4/garden_bridge.png",
+      "sourceSHA": "bb42a6e12a0f3f9dbc2c8cf0b7c17fbd5dba54fd",
+      "canvas": [
+        144,
+        136
+      ],
+      "origin": [
+        0,
+        0
+      ],
+      "exactVisibleRGBA": true,
+      "disjoint": true,
+      "visiblePixels": 7267,
+      "layers": [
+        {
+          "part": "back_rail",
+          "path": "garden_bridge_back_rail.png",
+          "pixels": 842,
+          "sha": "3ad71b89144aefd77e0989e1f883a972234317d2"
+        },
+        {
+          "part": "deck",
+          "path": "garden_bridge_deck.png",
+          "pixels": 5062,
+          "sha": "4a963e8c5448fabb4661a78c2a0a937ac0dd15b4"
+        },
+        {
+          "part": "front_rail",
+          "path": "garden_bridge_front_rail.png",
+          "pixels": 1363,
+          "sha": "d071cb893053b52876d5cc362a9de0ce3c175641"
+        }
+      ]
+    }
+  ],
+  "limitations": [
+    "源图遮挡下的未绘制像素无法恢复；独立移动、透明化或隐藏部件会暴露缺口",
+    "人工轮廓仍有边缘碎片，需视觉精修",
+    "正式引擎碰撞和遮挡待验收"
+  ]
+}
