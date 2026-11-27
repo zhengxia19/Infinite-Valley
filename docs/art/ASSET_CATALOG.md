@@ -51,3 +51,9 @@ masters_v1 = assets/source/environment/masters_v1；environment_v1 = assets/cand
 ## 五组环境组件用户确认（2026-11-27）
 用户在收到 `Infinite_Valley_Live_Asset_Review.html`（SHA-256 `9d41d52e73985f3fbfcef68c8a02f8c17cabcb0c4e7432e09ed1c877e73c10df`）两场景、163组件的实时Canvas诊断预览后，明确确认本轮素材。地形纹理及建筑地面、高精度分层建筑、模块化桥梁及护栏、四季树木及独立树冠树干、围栏/围栏门/台阶/道路附属组件均记为用户视觉确认通过，保留该版，不再重复生成。树木确认版为生成ID b0e623c8-694c-4c35-8452-cf13626505dd 的母版（实际文件SHA-256 c680272241bfa2bb5e1f2de3ab8cc67a8115adcce74ecca75179896ab3db3ff0），替代未确认的初版树木用于本批后续实施。其余树木生成变体未纳入本次确认。
 此确认不等同 D09 正式引擎门禁通过；尚须归档实际原稿及组件、完善配准/透明边缘/地形接缝、接入Phaser、完成真实角色通行碰撞和遮挡及性能测试。未覆盖的组件不推定已测试。PNG与HTML仍未上传仓库；本次仅提交用户确认记录，既有正式资产未修改。详见 [ENVIRONMENT_PLACEMENT.md](ENVIRONMENT_PLACEMENT.md)。
+
+## 五组环境素材技术集成更新（2026-11-27）
+- 163个用户已确认的裁切PNG原字节正式归档于 `assets/source/environment/approved_components_v1/components.zip`，文件为仓库内部源资产，不是用户交付下载包。保留已提交的 `tools/art/approved_components_v1/approved_review.html` 作为不可变确认证据；构建逐文件比较两个来源的实际PNG字节，任何差异失败。未重新生成、修改已确认的原始PNG或替换V3水体。
+- 运行素材自动构建199个组件，含18种对象的36张上下遮挡层、2张1024×1024图集（2px扩边）、48个256px地形区块及已批准人物。生成产物不重复提交，运行预览路径 `/?review=1`；Phaser浏览器测试已通过，详见环境实施记录。
+- 五张完整生成母版在当前会话中逐字节重新校验，精确字节数、SHA-256、生成ID、计划文件名记录于 `assets/source/environment/approved_components_v1/masters_manifest.json`。本次未能从隔离的本地容器向GitHub传输这五张大PNG原文件，不能把163张裁切PNG归档等同母版归档。初版未确认树木不纳入正式资产。
+- 原视觉确认有效；自动配准隐藏面仍近似、尚未覆盖全部原稿元素及每一资产ID的实际场景状态；真实硬件性能、所有图层视觉精修和共享世界正式集成未完成。禁止标记D09/G3最终门禁通过。
