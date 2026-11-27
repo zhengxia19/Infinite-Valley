@@ -1,0 +1,733 @@
+{
+  "status": "candidate_pending_visual_review",
+  "tileSize": 32,
+  "assets": {
+    "grass_01": {
+      "source": "a01_terrain",
+      "crop": [
+        34,
+        43,
+        95,
+        103
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "type": "base_tile",
+      "edge_test": "opposite_edges_exact",
+      "status": "candidate_pending_visual_review",
+      "sha256": "e60a632d040611d59f699e6dc0151d0f93284685bf8e77fe418d0c9ce351b1c1"
+    },
+    "grass_02": {
+      "source": "a01_terrain",
+      "crop": [
+        120,
+        44,
+        176,
+        102
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "type": "base_tile",
+      "edge_test": "opposite_edges_exact",
+      "status": "candidate_pending_visual_review",
+      "sha256": "78ca719abe7b263fa2da6341bac807f1d27657f614d2b2496bd42a6fc128f492"
+    },
+    "dirt_01": {
+      "source": "a01_terrain",
+      "crop": [
+        37,
+        232,
+        96,
+        291
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "type": "base_tile",
+      "edge_test": "opposite_edges_exact",
+      "status": "candidate_pending_visual_review",
+      "sha256": "85d9b0e34f76f988779087c92f374b08f5d880dc25954c99bdb0ac2e7c7e5990"
+    },
+    "dirt_02": {
+      "source": "a01_terrain",
+      "crop": [
+        120,
+        232,
+        175,
+        291
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "type": "base_tile",
+      "edge_test": "opposite_edges_exact",
+      "status": "candidate_pending_visual_review",
+      "sha256": "147ffc371b7795598d6aa48b350b8a22399b0cb650b09d8e53d0838a8d043a9a"
+    },
+    "sand_01": {
+      "source": "a01_terrain",
+      "crop": [
+        39,
+        411,
+        97,
+        468
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "type": "base_tile",
+      "edge_test": "opposite_edges_exact",
+      "status": "candidate_pending_visual_review",
+      "sha256": "22651ebcb96d365e1a41c508c89b38c53ec7a16c7bee4ca9d70d20c77436e198"
+    },
+    "sand_02": {
+      "source": "a01_terrain",
+      "crop": [
+        121,
+        410,
+        176,
+        467
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "type": "base_tile",
+      "edge_test": "opposite_edges_exact",
+      "status": "candidate_pending_visual_review",
+      "sha256": "c64130a63c711862bbfd08cfbfa46eaba6f6257aafaf85c6dfe13ab2d180a2d1"
+    },
+    "stone_01": {
+      "source": "a01_terrain",
+      "crop": [
+        34,
+        584,
+        97,
+        637
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "type": "base_tile",
+      "edge_test": "opposite_edges_exact",
+      "status": "candidate_pending_visual_review",
+      "sha256": "9ec843351b7c3a9a2cdb0c780a9d44ac098cd808456deeb449b77c8ea6d227eb"
+    },
+    "wetland_01": {
+      "source": "a01_terrain",
+      "crop": [
+        35,
+        736,
+        94,
+        788
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "type": "base_tile",
+      "edge_test": "opposite_edges_exact",
+      "status": "candidate_pending_visual_review",
+      "sha256": "758b6a5c5464ed33c4a384749206d6b6a8e13ae0428783cb48a5de1ddeb1c243"
+    },
+    "water_shallow_01": {
+      "source": "a02_water",
+      "crop": [
+        31,
+        30,
+        97,
+        104
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "type": "base_tile",
+      "edge_test": "opposite_edges_exact",
+      "status": "candidate_pending_visual_review",
+      "sha256": "f6d751072813bd5a0368755520833759046e0b096f57a1d06f7f41266167da05"
+    },
+    "water_shallow_02": {
+      "source": "a02_water",
+      "crop": [
+        124,
+        28,
+        190,
+        102
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "type": "base_tile",
+      "edge_test": "opposite_edges_exact",
+      "status": "candidate_pending_visual_review",
+      "sha256": "d591b1102c220514a4cac1cfa96b5878a2136864cb446b683279f0ce664bd911"
+    },
+    "water_deep_01": {
+      "source": "a02_water",
+      "crop": [
+        30,
+        134,
+        98,
+        202
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "type": "base_tile",
+      "edge_test": "opposite_edges_exact",
+      "status": "candidate_pending_visual_review",
+      "sha256": "bfdd1018085c03aad5187e2b4be4019dbf6b315ca8ff81f82ad7e43d62fa6e2a"
+    },
+    "water_deep_02": {
+      "source": "a02_water",
+      "crop": [
+        124,
+        134,
+        191,
+        202
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "type": "base_tile",
+      "edge_test": "opposite_edges_exact",
+      "status": "candidate_pending_visual_review",
+      "sha256": "9b6907f5d7d54e9ff4ca11202a458f5f1c6ff3df9b17ec92207ff3e28287f6e2"
+    },
+    "oak_mature": {
+      "source": "a03_trees",
+      "crop": [
+        476,
+        0,
+        750,
+        267
+      ],
+      "size": [
+        96,
+        128
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        48,
+        125
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "abf21306593e2c5db74bfce80d99c9f9b37342a01d5ad426ded2809c87ecacc8"
+    },
+    "pine_mature": {
+      "source": "a03_trees",
+      "crop": [
+        563,
+        263,
+        755,
+        505
+      ],
+      "size": [
+        64,
+        96
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        32,
+        93
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "0b25ab9e111e1dec22896ec51d1338c3e9c898020b7920992715203e4ca1b9bf"
+    },
+    "willow_mature": {
+      "source": "a03_trees",
+      "crop": [
+        467,
+        735,
+        764,
+        986
+      ],
+      "size": [
+        96,
+        128
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        48,
+        125
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "d25bf506726901bc2010c8aed9ed98af57d9c68dcca1c90aa0d2982d4bc69527"
+    },
+    "birch_mature": {
+      "source": "a03_trees",
+      "crop": [
+        491,
+        504,
+        730,
+        737
+      ],
+      "size": [
+        96,
+        128
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        48,
+        125
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "20a6845a3490318f12a5d704b5e6738a9d66dec190232e14723fdfa553c5d943"
+    },
+    "oak_autumn": {
+      "source": "a03_trees",
+      "crop": [
+        1254,
+        15,
+        1510,
+        267
+      ],
+      "size": [
+        96,
+        128
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        48,
+        125
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "334dbf5fb4212313530e3318d7b09523190717bc8db3acb1e2c091a1da3fb4ff"
+    },
+    "grass_tuft": {
+      "source": "a04_props",
+      "crop": [
+        19,
+        39,
+        86,
+        99
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        16,
+        29
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "e7c4fbb806fe9830c44067982d18cd4e9d52006ea9039c0358deb1779cf3eb96"
+    },
+    "flower_white": {
+      "source": "a04_props",
+      "crop": [
+        165,
+        116,
+        269,
+        204
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        24,
+        45
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "e5e78d4a26cf53bf9add46719e21292747d0b2e6c6982c327c0d78622ed74b8e"
+    },
+    "shrub_green": {
+      "source": "a04_props",
+      "crop": [
+        145,
+        307,
+        263,
+        397
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        24,
+        45
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "e710498006bc1fab6e5675cf8ec808d05c5fd3f5b18bd8c2495e0c415c29930f"
+    },
+    "fern": {
+      "source": "a04_props",
+      "crop": [
+        145,
+        410,
+        275,
+        495
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        24,
+        45
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "fa2abf0d52f9226ef1f8552e028bf36bf972c9beedee3df4254d9bd1641b3135"
+    },
+    "mushroom_red": {
+      "source": "a04_props",
+      "crop": [
+        598,
+        499,
+        699,
+        583
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        24,
+        45
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "47cad41878b0361d6f6a1254f797558832a5dcddfec0ad37f8cb3fdd161d135f"
+    },
+    "reeds": {
+      "source": "a04_props",
+      "crop": [
+        201,
+        581,
+        300,
+        687
+      ],
+      "size": [
+        48,
+        64
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        24,
+        61
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "3334d88de07402d74362837157febf3056ba22ce8d02f2e13d2d14c040e887d9"
+    },
+    "fallen_log": {
+      "source": "a04_props",
+      "crop": [
+        555,
+        681,
+        743,
+        766
+      ],
+      "size": [
+        96,
+        48
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        48,
+        45
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "24ef869bcc25c1207a1f278f1684701d1b2404ac0ddf644f916bf3d15731e357"
+    },
+    "stump": {
+      "source": "a04_props",
+      "crop": [
+        22,
+        781,
+        149,
+        869
+      ],
+      "size": [
+        64,
+        48
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        32,
+        45
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "df8d498b1982531dc4fccb754470372aa4a1db940d03b77850dc8b38ef1b2ef7"
+    },
+    "rock_moss": {
+      "source": "a04_props",
+      "crop": [
+        700,
+        872,
+        838,
+        971
+      ],
+      "size": [
+        64,
+        64
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        32,
+        61
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "0e927da2c12104cb35b4e60001562ef350913bb4350ad904de8861ac81f21c67"
+    },
+    "cottage": {
+      "source": "a05_buildings",
+      "crop": [
+        10,
+        0,
+        476,
+        442
+      ],
+      "size": [
+        192,
+        192
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        96,
+        189
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "681294a6f8b2d7c7154509a6315c5155d43f0c6770b25169b4c447d1ad4e4a7b"
+    },
+    "woodshed": {
+      "source": "a05_buildings",
+      "crop": [
+        1195,
+        193,
+        1448,
+        423
+      ],
+      "size": [
+        128,
+        128
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        64,
+        125
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "ec803aed80fe8af534cc248b8e016b38602eb61d26cb4085557f74981f4d45c3"
+    },
+    "fence_horizontal": {
+      "source": "a05_buildings",
+      "crop": [
+        10,
+        451,
+        169,
+        560
+      ],
+      "size": [
+        64,
+        48
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        32,
+        45
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "58ee492764320da06defe6044ecc0583e7453db3d4ff939631a1412221f6e1da"
+    },
+    "signpost": {
+      "source": "a05_buildings",
+      "crop": [
+        1058,
+        568,
+        1184,
+        737
+      ],
+      "size": [
+        48,
+        64
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        24,
+        61
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "eaa0d465a37b7453d080830bd7009ba9fd64d959c4f3711ba306dabfdb008429"
+    },
+    "lantern": {
+      "source": "a05_buildings",
+      "crop": [
+        1200,
+        553,
+        1333,
+        744
+      ],
+      "size": [
+        48,
+        96
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        24,
+        93
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "12bfea0702f64bf83c6e9c1e55a8b9661657989427758b1dc1b99edc72fba0a5"
+    },
+    "barrel": {
+      "source": "a05_buildings",
+      "crop": [
+        1035,
+        757,
+        1148,
+        871
+      ],
+      "size": [
+        48,
+        48
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        24,
+        45
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "96487929741beeb0ee3acac7d8b554c0482df00b1bd906eca7d236fd40a8a842"
+    },
+    "bridge_vertical": {
+      "source": "a05_buildings",
+      "crop": [
+        658,
+        900,
+        814,
+        1062
+      ],
+      "size": [
+        96,
+        96
+      ],
+      "type": "sprite",
+      "anchorPx": [
+        48,
+        93
+      ],
+      "anchor_status": "provisional_manual_review",
+      "collision": "not_validated",
+      "status": "candidate_pending_visual_review",
+      "sha256": "479cacd74819cf24e38bb958c171802bd1616c39201fb0ac6c357aec1b857fb7"
+    },
+    "path_straight_sample": {
+      "source": "a05_buildings",
+      "crop": [
+        168,
+        590,
+        251,
+        689
+      ],
+      "size": [
+        32,
+        32
+      ],
+      "type": "base_tile",
+      "edge_test": "opposite_edges_exact",
+      "status": "candidate_pending_visual_review",
+      "sha256": "2fdb24fbab301f860ef6268d68e6d7683f63fe6909aa8675c93783bb59a8b9ec"
+    }
+  },
+  "tests": {
+    "base_tile_exact_edges": 13,
+    "sprite_binary_alpha_and_nonempty": 21,
+    "not_tested": [
+      "mixed_material_autotile",
+      "collision",
+      "occlusion",
+      "animation",
+      "Phaser",
+      "procedural_scene"
+    ]
+  },
+  "source_files": {
+    "a01_terrain.png": {
+      "sha256": "eb232efed659609726c4ee2aec6275c4eed916fb49c85995490a8e264c99bb78",
+      "bytes": 2910294,
+      "approval": "approved_visual_master"
+    },
+    "a02_water.png": {
+      "sha256": "bfa7f2c0604c8cbd005fbc6f43fecabee7f725d7e69e5dcd86e2471a784fd61c",
+      "bytes": 3144149,
+      "approval": "approved_visual_master"
+    },
+    "a03_trees.png": {
+      "sha256": "541cb4edf6ce0cfe83697391f618e03e20176492512b856872383f47b90169f0",
+      "bytes": 2334521,
+      "approval": "approved_visual_master"
+    },
+    "a04_props.png": {
+      "sha256": "6cfcb1b87bc6af3a2ad17a33aadd82068cc3884929ec856127cb93930f6820ac",
+      "bytes": 2608382,
+      "approval": "approved_visual_master"
+    },
+    "a05_buildings.png": {
+      "sha256": "ffac64d419577dcf8c51d3c59f94a5b764370e5f278afa387a281a3c68285d68",
+      "bytes": 2431381,
+      "approval": "approved_visual_master"
+    },
+    "approved_style_scene.png": {
+      "sha256": "2fe12afa82d9a3204f6e275bb8fd39cb6ca9f497c6880792846fa2d5df670422",
+      "bytes": 3374708,
+      "approval": "approved_visual_master"
+    }
+  }
+}
