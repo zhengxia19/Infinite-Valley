@@ -1,0 +1,14 @@
+name: World prototype
+on: [push, pull_request]
+jobs:
+  world-core:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm test
+      # 初次联网安装需生成并提交lockfile，此处尚不使用npm ci。
+      - run: npm install --no-audit --no-fund
+      - run: npm run build

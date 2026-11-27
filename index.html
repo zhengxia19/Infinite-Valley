@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>无限山谷 · 开放世界原型</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#263b30;color:#f0e6c9;font:14px system-ui,sans-serif;overflow:hidden}
+#game{height:100dvh;width:100vw}
+#hud{position:fixed;top:12px;left:12px;padding:8px 12px;background:#263b30df;border:1px solid #a9ba8b;border-radius:5px;pointer-events:none;white-space:pre-line}
+#controls{position:fixed;bottom:16px;left:16px;display:grid;grid-template-columns:repeat(3,46px);gap:4px;touch-action:none}
+button{height:46px;border:1px solid #a9ba8b;border-radius:5px;background:#384f41e8;color:#f0e6c9;font-size:21px;touch-action:none}
+button:active{background:#6c8b56}
+.up{grid-column:2}.left{grid-column:1}
+@media(pointer:fine){#controls{opacity:.65}}
+</style>
+</head>
+<body>
+<div id="game"></div>
+<div id="hud">开放世界技术预览 · 正在加载</div>
+<div id="controls" aria-label="移动">
+<button class="up" data-key="up" aria-label="向上">↑</button>
+<button class="left" data-key="left" aria-label="向左">←</button>
+<button data-key="down" aria-label="向下">↓</button>
+<button data-key="right" aria-label="向右">→</button>
+</div>
+<script type="module" src="/src/client/main.ts"></script>
+</body></html>
