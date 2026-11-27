@@ -35,3 +35,7 @@ Python实际执行各方向各动作帧唯一性、硬透明、边界、脚底�
 - male/lower_1.png: 32ce51a28295830417cbd68e98c7c047b1a4a219
 - male/upper_0.png: 887306acd0589a82c4179e9c0bd0834232e4213e
 - male/upper_1.png: 192f7c09ea3820de7c6bad97563d348582f595a3
+
+
+## 后续验收记录（2026-11-27）
+用户明确完成视觉验收，28张PNG原样迁至 assets/source/characters/character_v2/，2份atlas状态改为visual_approved_pending_engine_integration。正文原候选状态与路径为历史记录；原先未测项仍未测，见新目录 farming_actions_v1/README.md。

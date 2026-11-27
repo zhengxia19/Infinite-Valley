@@ -1,0 +1,981 @@
+{
+  "frames": {
+    "male": [
+      {
+        "name": "south_hoe_00",
+        "bbox": [
+          19,
+          11,
+          43,
+          69
+        ],
+        "sha256": "f80bbc23a7ae17bcb3226d775e1b111914a6472433053d0d4451a80bcac9bc48"
+      },
+      {
+        "name": "south_hoe_01",
+        "bbox": [
+          17,
+          11,
+          43,
+          66
+        ],
+        "sha256": "3173d3a8709e0ec644d1504489fd47d17fb2856e50620147fd86f32add825ad1"
+      },
+      {
+        "name": "south_hoe_02",
+        "bbox": [
+          16,
+          7,
+          45,
+          65
+        ],
+        "sha256": "c2bc99a7bedfd99ef4dcbd3a6e01a241b03c311ed16727244d4194254ed8aeaf"
+      },
+      {
+        "name": "south_hoe_03",
+        "bbox": [
+          18,
+          12,
+          43,
+          72
+        ],
+        "sha256": "33047e0999a406f89ffdf460358ef245b501b1361075432d1273e60e083313fb"
+      },
+      {
+        "name": "south_water_00",
+        "bbox": [
+          21,
+          10,
+          45,
+          66
+        ],
+        "sha256": "31219a4942fc25ea81f9d8e59ae8fbad02f71afdd6d841e16609515c7f709a83"
+      },
+      {
+        "name": "south_water_01",
+        "bbox": [
+          19,
+          10,
+          43,
+          66
+        ],
+        "sha256": "0f9858c5982c090dc2bf332674004b1923349508d822d3a92ce4ddaab309bebc"
+      },
+      {
+        "name": "south_water_02",
+        "bbox": [
+          19,
+          10,
+          43,
+          69
+        ],
+        "sha256": "2bc77f84fa76f7e811951b39e1010e43536d38d65465ac81086fad0090763428"
+      },
+      {
+        "name": "south_water_03",
+        "bbox": [
+          19,
+          10,
+          44,
+          66
+        ],
+        "sha256": "55c011a40f58dcc91e21d1c6e82973d48248ff0e51d5068fc9ac0925824d577f"
+      },
+      {
+        "name": "south_harvest_00",
+        "bbox": [
+          20,
+          10,
+          44,
+          66
+        ],
+        "sha256": "dc3e0609c4d59755715b9aad7afd0bda43aaf0d045ded6b49fe037ed014313ed"
+      },
+      {
+        "name": "south_harvest_01",
+        "bbox": [
+          19,
+          22,
+          47,
+          67
+        ],
+        "sha256": "494181700ea1b5baadfbab3404aa5dcc71ab3abe1d2fbb25ebeab43f692a2f7c"
+      },
+      {
+        "name": "south_harvest_02",
+        "bbox": [
+          21,
+          12,
+          46,
+          66
+        ],
+        "sha256": "f33a164c850f5b2a92d045e15c786449548fa50f7b5ae8a5ee365fb56a788b27"
+      },
+      {
+        "name": "south_harvest_03",
+        "bbox": [
+          21,
+          10,
+          51,
+          66
+        ],
+        "sha256": "c0714a2e02f77b45e83e3bc0bcb5d3acee024deb04b476dc0a89052d2e41d2b5"
+      },
+      {
+        "name": "north_hoe_00",
+        "bbox": [
+          21,
+          10,
+          47,
+          65
+        ],
+        "sha256": "f831a6499625eeb368eeb35037c8f8881848843e2fe6e4c7490d87f9d5c7203f"
+      },
+      {
+        "name": "north_hoe_01",
+        "bbox": [
+          19,
+          9,
+          43,
+          65
+        ],
+        "sha256": "b0ce42c9113bde92ac882c828e8f2ff66e58a5474f341ffeb02883bab6a0aa4d"
+      },
+      {
+        "name": "north_hoe_02",
+        "bbox": [
+          19,
+          7,
+          51,
+          65
+        ],
+        "sha256": "cdb4913abbb1ca335f6d231bc5697f44c568df14f90994e7588675e2b4b6fa82"
+      },
+      {
+        "name": "north_hoe_03",
+        "bbox": [
+          19,
+          13,
+          45,
+          68
+        ],
+        "sha256": "caea86ddf8654079044d6bc4821a1359ff84d854b0fb3c13f8c47bc7da526927"
+      },
+      {
+        "name": "north_water_00",
+        "bbox": [
+          21,
+          9,
+          47,
+          66
+        ],
+        "sha256": "d190fc05be08d4a1552cf5fc092826be2be6cc21f0c3cf3e032087ac5933ae96"
+      },
+      {
+        "name": "north_water_01",
+        "bbox": [
+          20,
+          9,
+          48,
+          66
+        ],
+        "sha256": "7f207b3001363f61b0288e1208ae93ad7df0b01ab5bad57c486ef47438a84481"
+      },
+      {
+        "name": "north_water_02",
+        "bbox": [
+          20,
+          10,
+          51,
+          66
+        ],
+        "sha256": "13179a5870a85e71ca005266b27799b051b8dbe5aa48aa8420dc950770da29f4"
+      },
+      {
+        "name": "north_water_03",
+        "bbox": [
+          20,
+          9,
+          45,
+          66
+        ],
+        "sha256": "edbe4748924828c4d546745720bdd9faee6fe48c7529a958d6fb8b113814c567"
+      },
+      {
+        "name": "north_harvest_00",
+        "bbox": [
+          20,
+          9,
+          45,
+          66
+        ],
+        "sha256": "cb6adcb242a6e914f2912ce733c01639ff4376bdcc3b74e06688bfef009cf44e"
+      },
+      {
+        "name": "north_harvest_01",
+        "bbox": [
+          20,
+          22,
+          47,
+          66
+        ],
+        "sha256": "b0dd9a0f5b2374d6e302b7ad10becd41a40922fab0ec693bc937f1cc9f7243d7"
+      },
+      {
+        "name": "north_harvest_02",
+        "bbox": [
+          21,
+          13,
+          44,
+          66
+        ],
+        "sha256": "b2b745391841af61904ec06250ccc7808cc315aa3b5fc29a7a354a1b5a83f276"
+      },
+      {
+        "name": "north_harvest_03",
+        "bbox": [
+          20,
+          9,
+          51,
+          66
+        ],
+        "sha256": "ee55f60d0b6fc090e99590e41607b9415400f81a2e36e38d7e20e0c5d10d8bc3"
+      },
+      {
+        "name": "west_hoe_00",
+        "bbox": [
+          13,
+          11,
+          43,
+          65
+        ],
+        "sha256": "bc2e1123d01a8126117e80be91ed7a86748049842aed940409e83241cde74f59"
+      },
+      {
+        "name": "west_hoe_01",
+        "bbox": [
+          11,
+          11,
+          44,
+          65
+        ],
+        "sha256": "81c1c38046741bab19686351c2320f5bd8fe53a282c50eae37bc723634345b24"
+      },
+      {
+        "name": "west_hoe_02",
+        "bbox": [
+          16,
+          10,
+          46,
+          65
+        ],
+        "sha256": "3ea5bee37ad3d109116d326b7d56e476765c8e89e65dd803323832ac9b234dc5"
+      },
+      {
+        "name": "west_hoe_03",
+        "bbox": [
+          13,
+          13,
+          45,
+          67
+        ],
+        "sha256": "0530bd56fc6d4d3e3adedfa62773b4ad1c60d2a908d8d14d083ee3eb3060564b"
+      },
+      {
+        "name": "west_water_00",
+        "bbox": [
+          18,
+          11,
+          43,
+          65
+        ],
+        "sha256": "01da025826ed3c1e94c03106aadc83f473ce26bc5204b63b33d05f7e2469ddc3"
+      },
+      {
+        "name": "west_water_01",
+        "bbox": [
+          17,
+          11,
+          44,
+          65
+        ],
+        "sha256": "8e00f65ccc29140f7248520f8c46d2e48f0a8ba19d147e8a3ef6979600b27810"
+      },
+      {
+        "name": "west_water_02",
+        "bbox": [
+          15,
+          12,
+          44,
+          66
+        ],
+        "sha256": "cf395a40f5a1959e6418fa395269d8dcbba62c1e5f0364f1a1e07d4ff497acc3"
+      },
+      {
+        "name": "west_water_03",
+        "bbox": [
+          19,
+          11,
+          44,
+          66
+        ],
+        "sha256": "a02b8f917a3bcc3069a7e59c14d90a3ceb92f90fd5696533bde91fd070893001"
+      },
+      {
+        "name": "west_harvest_00",
+        "bbox": [
+          21,
+          11,
+          43,
+          66
+        ],
+        "sha256": "dfd6e13903f1753ba080f331e4338b680970f66d435569ebb7a891c642307485"
+      },
+      {
+        "name": "west_harvest_01",
+        "bbox": [
+          21,
+          23,
+          50,
+          65
+        ],
+        "sha256": "5b48055b329dea9bf5f4f46325d16b4fe62c308a46624550e2e2d728557d51ce"
+      },
+      {
+        "name": "west_harvest_02",
+        "bbox": [
+          18,
+          13,
+          47,
+          65
+        ],
+        "sha256": "3a044ef6787530eb9bb45855f04ca8525f8652dff96f6517eefd0abb91d362e9"
+      },
+      {
+        "name": "west_harvest_03",
+        "bbox": [
+          16,
+          11,
+          44,
+          66
+        ],
+        "sha256": "501057ead987d646beb3b1ae28c5349333d66ee753857775e505a4d7f49897f6"
+      },
+      {
+        "name": "east_hoe_00",
+        "bbox": [
+          21,
+          11,
+          50,
+          66
+        ],
+        "sha256": "453b9d4b854ef84dde2e7ad586ee1392ccdfa64e577ad731cc95411aa18cea8a"
+      },
+      {
+        "name": "east_hoe_01",
+        "bbox": [
+          20,
+          11,
+          52,
+          66
+        ],
+        "sha256": "dff62cc5db463641238484108410f73f5582b205d8027428d6fae7ce5e659611"
+      },
+      {
+        "name": "east_hoe_02",
+        "bbox": [
+          16,
+          9,
+          46,
+          65
+        ],
+        "sha256": "290941591b1c4fdde9eae3be932dc9b0df84301075afa1916c8ec066dae5420e"
+      },
+      {
+        "name": "east_hoe_03",
+        "bbox": [
+          20,
+          13,
+          53,
+          67
+        ],
+        "sha256": "25ce43c89255167a514df188323d0d620b7441c5fd81e4e2476df5e9084225db"
+      },
+      {
+        "name": "east_water_00",
+        "bbox": [
+          22,
+          11,
+          46,
+          66
+        ],
+        "sha256": "3d2add2b9661ea2494e57a3464b1490a47765f62ee204225a264d750d61b26cc"
+      },
+      {
+        "name": "east_water_01",
+        "bbox": [
+          20,
+          11,
+          46,
+          66
+        ],
+        "sha256": "10b28c1481b7234392895c855f13f8c08cc5aa54bbcdcbc40f0bb43572a3fd94"
+      },
+      {
+        "name": "east_water_02",
+        "bbox": [
+          20,
+          12,
+          51,
+          66
+        ],
+        "sha256": "db789ddd6c5f4947328b914db66af42ed5275fc2e2c5623637f850146b821cb7"
+      },
+      {
+        "name": "east_water_03",
+        "bbox": [
+          21,
+          11,
+          44,
+          66
+        ],
+        "sha256": "6a2ff64cae41ff530116d9a10c75c783c8243d0e31041d9e80e8512347fb14db"
+      },
+      {
+        "name": "east_harvest_00",
+        "bbox": [
+          21,
+          12,
+          44,
+          66
+        ],
+        "sha256": "5d871e25558625e3b99b41a23d1d2bbe34c7d4c7b2497a4be63dc1ec738ee1a0"
+      },
+      {
+        "name": "east_harvest_01",
+        "bbox": [
+          14,
+          25,
+          44,
+          66
+        ],
+        "sha256": "624d5a54ff90ffece789992e8ceb3fa8bd76694a3fab5a0019e034eec103df9e"
+      },
+      {
+        "name": "east_harvest_02",
+        "bbox": [
+          18,
+          15,
+          47,
+          66
+        ],
+        "sha256": "945e6990862703c4bafe9ad0c3a33c5014b5e2affb6aebf459c2ba221b4973eb"
+      },
+      {
+        "name": "east_harvest_03",
+        "bbox": [
+          21,
+          12,
+          52,
+          66
+        ],
+        "sha256": "09bcb6ae132e78daec7dbcf1513e5b01830b93df763093ba76c22509f6bb97d9"
+      }
+    ],
+    "female": [
+      {
+        "name": "south_hoe_00",
+        "bbox": [
+          21,
+          9,
+          44,
+          68
+        ],
+        "sha256": "9af75194e32a4d3d517b613b998d91e87e31ce8f52ed278530e9e9918f151be4"
+      },
+      {
+        "name": "south_hoe_01",
+        "bbox": [
+          17,
+          9,
+          44,
+          66
+        ],
+        "sha256": "1258c91e50288c371cf075999ec482dbe096048b390121ca4402f87b23955f50"
+      },
+      {
+        "name": "south_hoe_02",
+        "bbox": [
+          14,
+          9,
+          46,
+          66
+        ],
+        "sha256": "50619e50a8aa15bd268920edfebdfcc6fcf7488b4a8ab74aea39f1b3e263b394"
+      },
+      {
+        "name": "south_hoe_03",
+        "bbox": [
+          19,
+          14,
+          44,
+          68
+        ],
+        "sha256": "5abaec7b17e69c158a031b6551e7e7207b473699c42f71263bce55316d1f4f01"
+      },
+      {
+        "name": "south_water_00",
+        "bbox": [
+          21,
+          9,
+          44,
+          66
+        ],
+        "sha256": "ecab7580939988aa80764292432801e6efff7cef4f750ce481bf2247ac0a81ae"
+      },
+      {
+        "name": "south_water_01",
+        "bbox": [
+          19,
+          9,
+          44,
+          66
+        ],
+        "sha256": "c2da1d7d9925d03949dc4be2948a4ed110c32f7fa13965f6e465c1336fe79fdf"
+      },
+      {
+        "name": "south_water_02",
+        "bbox": [
+          19,
+          9,
+          44,
+          69
+        ],
+        "sha256": "97c8fa0adbad1e6b2dab7042c4f4e27e48a7fe38e90a16b160e5219abd0023ec"
+      },
+      {
+        "name": "south_water_03",
+        "bbox": [
+          21,
+          9,
+          44,
+          66
+        ],
+        "sha256": "3d54804ed1fd4e891b018e76fdf047cc34a1234ebd31977bb84e09ac4170e7c3"
+      },
+      {
+        "name": "south_harvest_00",
+        "bbox": [
+          20,
+          9,
+          44,
+          66
+        ],
+        "sha256": "02ce87dce9c8c20861338599609ba0141b204a3b5f9a800cb380af7685e8932d"
+      },
+      {
+        "name": "south_harvest_01",
+        "bbox": [
+          20,
+          17,
+          44,
+          66
+        ],
+        "sha256": "5783c2f5ec11e216349a1baea16181e622a8c6edf9d2b0092eb59b36ca07105e"
+      },
+      {
+        "name": "south_harvest_02",
+        "bbox": [
+          19,
+          18,
+          46,
+          66
+        ],
+        "sha256": "ba0cd6f40ba4b3506dedbdedca8520549378e246cfe5413d47e0751e5388b003"
+      },
+      {
+        "name": "south_harvest_03",
+        "bbox": [
+          21,
+          9,
+          44,
+          66
+        ],
+        "sha256": "6df7460a2b0b5c83ef0cfbe21d7910cc3cb5affb6180c284c205bd749b026f76"
+      },
+      {
+        "name": "north_hoe_00",
+        "bbox": [
+          21,
+          10,
+          44,
+          66
+        ],
+        "sha256": "586e091b254b71a26ecd05ddea43262affd028d65409244ecb2eb4d71a05f757"
+      },
+      {
+        "name": "north_hoe_01",
+        "bbox": [
+          21,
+          10,
+          48,
+          66
+        ],
+        "sha256": "b1a2c1d4549103965fd36cee7716e48ce01afe4ec6f6bd887c46ff2691681469"
+      },
+      {
+        "name": "north_hoe_02",
+        "bbox": [
+          14,
+          10,
+          45,
+          66
+        ],
+        "sha256": "a75e5fa28f3f54e62b72e7556cf07aae4f2c5a42547a8665888ffc23f0ecad37"
+      },
+      {
+        "name": "north_hoe_03",
+        "bbox": [
+          14,
+          17,
+          47,
+          66
+        ],
+        "sha256": "ffbdb574146ff7811dbe11494ac227416afac385f55c6b966250572faec43596"
+      },
+      {
+        "name": "north_water_00",
+        "bbox": [
+          22,
+          10,
+          45,
+          66
+        ],
+        "sha256": "7446242396225a6b7cce2de2cb25f3929b5d0db3312f727c945b56aff6b563ce"
+      },
+      {
+        "name": "north_water_01",
+        "bbox": [
+          22,
+          10,
+          50,
+          66
+        ],
+        "sha256": "30e0fdb955ce700548fc1b8eb0850d3a01cfc2c39c21d01a3e7b0602e63af41a"
+      },
+      {
+        "name": "north_water_02",
+        "bbox": [
+          21,
+          10,
+          54,
+          66
+        ],
+        "sha256": "6c144f478ced41ab0ec68140f822f96b8052e590686907e755a605cb381d7394"
+      },
+      {
+        "name": "north_water_03",
+        "bbox": [
+          22,
+          10,
+          44,
+          66
+        ],
+        "sha256": "04c086276c69113493519da0db9eea5c854ffeeb3c83e665e5bbea16d4980eb2"
+      },
+      {
+        "name": "north_harvest_00",
+        "bbox": [
+          22,
+          10,
+          44,
+          66
+        ],
+        "sha256": "a6e59d85f955ab0180c59777e562303cc62cd35e54fccded19c8ade2ae8e6196"
+      },
+      {
+        "name": "north_harvest_01",
+        "bbox": [
+          21,
+          18,
+          44,
+          66
+        ],
+        "sha256": "d018fa5bd0f3a570de71b17d7d34fe74f8f5a74873420a728ea1de94aa4f7d46"
+      },
+      {
+        "name": "north_harvest_02",
+        "bbox": [
+          19,
+          23,
+          45,
+          66
+        ],
+        "sha256": "8c1d962e62e10ed6a6fcc692aa03ad2ffe79d392e378d5ff1723dceed991da91"
+      },
+      {
+        "name": "north_harvest_03",
+        "bbox": [
+          22,
+          10,
+          44,
+          66
+        ],
+        "sha256": "b4579c323fdec3816b942cab3dfcb99f6579eb158bc368d807edd743d766580e"
+      },
+      {
+        "name": "west_hoe_00",
+        "bbox": [
+          15,
+          11,
+          45,
+          66
+        ],
+        "sha256": "7b429b604c4392b7821dfa0bf16619eb8b7d617b4672cd57308df243dcd5c97c"
+      },
+      {
+        "name": "west_hoe_01",
+        "bbox": [
+          14,
+          11,
+          45,
+          66
+        ],
+        "sha256": "cbf246ff9a71e87d267dc1ba81e755b5e9f6980af55f8082f07c9ee473b3e230"
+      },
+      {
+        "name": "west_hoe_02",
+        "bbox": [
+          18,
+          10,
+          50,
+          65
+        ],
+        "sha256": "42b7461167848fa14b74397645d950fd1d04f9f4ac85845f8f18e5b9cac8b2dc"
+      },
+      {
+        "name": "west_hoe_03",
+        "bbox": [
+          10,
+          16,
+          46,
+          66
+        ],
+        "sha256": "a346bf8cf8d8a06d4921e5bbfa5ac6bb57ef3a154c0e38f2f2546eb303cb69f3"
+      },
+      {
+        "name": "west_water_00",
+        "bbox": [
+          19,
+          11,
+          45,
+          66
+        ],
+        "sha256": "478b2c3f8269afb8e7fa4c843465c35ba8bd2361bdbc28e8b7fdae07a4d7013d"
+      },
+      {
+        "name": "west_water_01",
+        "bbox": [
+          15,
+          11,
+          45,
+          66
+        ],
+        "sha256": "aec7ca078b3aa71a4762032938f8e6a14bb7525617d63351d94caccafbf4b9a1"
+      },
+      {
+        "name": "west_water_02",
+        "bbox": [
+          8,
+          11,
+          45,
+          66
+        ],
+        "sha256": "32a77fa9e72db4bc6c3cd082bed9d43e1216b9bcd6e4007b71a00d427551a6b2"
+      },
+      {
+        "name": "west_water_03",
+        "bbox": [
+          20,
+          11,
+          45,
+          66
+        ],
+        "sha256": "91488f11f9186ab9a8df48ad8ded1169c0879e2959d1b6ea34b72a715019328f"
+      },
+      {
+        "name": "west_harvest_00",
+        "bbox": [
+          19,
+          11,
+          45,
+          66
+        ],
+        "sha256": "37227bb4f1c93550a922da911602e63f96e5f24a1f53fd6be143c62999aa445f"
+      },
+      {
+        "name": "west_harvest_01",
+        "bbox": [
+          19,
+          18,
+          46,
+          66
+        ],
+        "sha256": "4421a20f91a7a1e5d6ec3f32de44a2d1af1ba4909e2edca2559ca90eaa155742"
+      },
+      {
+        "name": "west_harvest_02",
+        "bbox": [
+          17,
+          22,
+          48,
+          66
+        ],
+        "sha256": "8f55fd0258238508b5251a6c55deab053873ad6b41deb11b783420aa1e3fdc7c"
+      },
+      {
+        "name": "west_harvest_03",
+        "bbox": [
+          20,
+          11,
+          45,
+          66
+        ],
+        "sha256": "6092f5846cbcb3567bd67908e399650645f9d28cca53f51d61eb2a1c1f96f49b"
+      },
+      {
+        "name": "east_hoe_00",
+        "bbox": [
+          20,
+          11,
+          49,
+          66
+        ],
+        "sha256": "d4b0dbe7afa313e70e5e41d48c553a083b1f18399a6ec1535e98488aaca0145c"
+      },
+      {
+        "name": "east_hoe_01",
+        "bbox": [
+          19,
+          11,
+          53,
+          66
+        ],
+        "sha256": "98ee7b944c2f17e1997ffa805af3c6dca7ffffdd53e6cd75e89731e8fc80d44e"
+      },
+      {
+        "name": "east_hoe_02",
+        "bbox": [
+          15,
+          11,
+          49,
+          66
+        ],
+        "sha256": "1cf1d3578a0d8a05862e32e42437ec943f289bef5c7ff86c28ce48a3004d9f36"
+      },
+      {
+        "name": "east_hoe_03",
+        "bbox": [
+          18,
+          16,
+          52,
+          66
+        ],
+        "sha256": "92dec4e108fb8cfb54ef070d2dc720724dd9a1f6eed97797c01d0fa8ce64f2b3"
+      },
+      {
+        "name": "east_water_00",
+        "bbox": [
+          20,
+          11,
+          45,
+          66
+        ],
+        "sha256": "263f1b88e1c0fd3b5f37d9d7d582ef4a98566cd9f96f362c876619ca75fbc182"
+      },
+      {
+        "name": "east_water_01",
+        "bbox": [
+          20,
+          11,
+          50,
+          66
+        ],
+        "sha256": "32b20221126f2cb51fcff34e1dc0790c2646cfa16cb14cccffaff4708cdd4f5c"
+      },
+      {
+        "name": "east_water_02",
+        "bbox": [
+          20,
+          11,
+          57,
+          65
+        ],
+        "sha256": "515092513a3a31ce9b54a0a93b4425ccf94a4e77cded366e829bbf647a423b59"
+      },
+      {
+        "name": "east_water_03",
+        "bbox": [
+          20,
+          11,
+          45,
+          66
+        ],
+        "sha256": "3d2e0b04646d052f398118fcb0a8ee3e8c9e1adecfaf8b2097f023006ed001dd"
+      },
+      {
+        "name": "east_harvest_00",
+        "bbox": [
+          19,
+          11,
+          46,
+          66
+        ],
+        "sha256": "b0dc119a018300c85efbc09502efbb2d5a73f03d85a3afc9a4503a01c81122c8"
+      },
+      {
+        "name": "east_harvest_01",
+        "bbox": [
+          19,
+          17,
+          46,
+          66
+        ],
+        "sha256": "baaefdf7bc2e6d7d244c1f3ee60e58ceda488eaecadcd5d95d95cb61f36e3423"
+      },
+      {
+        "name": "east_harvest_02",
+        "bbox": [
+          17,
+          23,
+          46,
+          66
+        ],
+        "sha256": "9122be1e0479a500b14b61d2259ac8b350d3b22f61a80ff888a24584b31032bc"
+      },
+      {
+        "name": "east_harvest_03",
+        "bbox": [
+          20,
+          11,
+          47,
+          66
+        ],
+        "sha256": "2648796f7084c285251802c3b832bde1c0ecdd4f1f9920b4538dac680d0c801d"
+      }
+    ]
+  },
+  "tests": [
+    "48 connected main objects per source",
+    "64x80 padded action frame bounds (48x64 character display unchanged)",
+    "hard alpha",
+    "4 unique frames per action direction",
+    "no projected extent clipping"
+  ],
+  "not_tested": [
+    "animation quality",
+    "Phaser integration",
+    "exact hand/foot registration",
+    "layered action variants"
+  ]
+}

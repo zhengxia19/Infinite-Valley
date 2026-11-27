@@ -1,1333 +1,1302 @@
 {
-  "assetId": "player_male_v2",
-  "status": "candidate_pending_visual_review",
+  "assetId": "male_farm_actions_v1",
+  "status": "art_approved_source_runtime_candidate",
   "frameSize": [
+    64,
+    80
+  ],
+  "characterDisplayFrame": [
     48,
     64
   ],
   "tileSize": 32,
   "anchorPx": [
-    24,
-    61
+    32,
+    65
   ],
-  "groundBaseline": 61,
-  "collisionFootprintTiles": {
-    "width": 0.5,
-    "height": 0.35
-  },
-  "layers": [
-    {
-      "id": "body",
-      "variants": [
-        "body_0.png",
-        "body_1.png"
-      ]
-    },
-    {
-      "id": "hair",
-      "variants": [
-        "hair_0.png",
-        "hair_1.png"
-      ]
-    },
-    {
-      "id": "upper",
-      "variants": [
-        "upper_0.png",
-        "upper_1.png"
-      ]
-    },
-    {
-      "id": "lower",
-      "variants": [
-        "lower_0.png",
-        "lower_1.png"
-      ]
-    },
-    {
-      "id": "boots",
-      "variants": [
-        "boots_0.png",
-        "boots_1.png"
-      ]
-    },
-    {
-      "id": "accessory",
-      "variants": [
-        "accessory_0.png",
-        "accessory_1.png"
-      ]
-    }
-  ],
-  "optionalOverlays": [
-    {
-      "id": "cap",
-      "image": "cap.png",
-      "drawOrder": "after_visible_layers",
-      "optional": true
-    }
-  ],
-  "layering": "disjoint_visible_pixel_layers_same_silhouette_plus_cap_overlay",
   "frames": {
-    "south_idle_00": {
+    "south_hoe_00": {
       "frame": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "south_idle_01": {
+    "south_hoe_01": {
       "frame": {
-        "x": 48,
+        "x": 64,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "south_idle_02": {
+    "south_hoe_02": {
       "frame": {
-        "x": 96,
+        "x": 128,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "south_idle_03": {
-      "frame": {
-        "x": 144,
-        "y": 0,
-        "w": 48,
-        "h": 64
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 48,
-        "h": 64
-      },
-      "sourceSize": {
-        "w": 48,
-        "h": 64
-      },
-      "anchor": {
-        "x": 0.5,
-        "y": 0.953125
-      }
-    },
-    "south_walk_00": {
+    "south_hoe_03": {
       "frame": {
         "x": 192,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "south_walk_01": {
+    "south_water_00": {
       "frame": {
-        "x": 240,
+        "x": 256,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "south_walk_02": {
+    "south_water_01": {
       "frame": {
-        "x": 288,
+        "x": 320,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "south_walk_03": {
-      "frame": {
-        "x": 336,
-        "y": 0,
-        "w": 48,
-        "h": 64
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 48,
-        "h": 64
-      },
-      "sourceSize": {
-        "w": 48,
-        "h": 64
-      },
-      "anchor": {
-        "x": 0.5,
-        "y": 0.953125
-      }
-    },
-    "south_walk_04": {
+    "south_water_02": {
       "frame": {
         "x": 384,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "south_walk_05": {
+    "south_water_03": {
       "frame": {
-        "x": 432,
+        "x": 448,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "south_walk_06": {
+    "south_harvest_00": {
       "frame": {
-        "x": 480,
+        "x": 512,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "south_walk_07": {
+    "south_harvest_01": {
       "frame": {
-        "x": 528,
+        "x": 576,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "north_idle_00": {
+    "south_harvest_02": {
+      "frame": {
+        "x": 640,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "south_harvest_03": {
+      "frame": {
+        "x": 704,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "north_hoe_00": {
       "frame": {
         "x": 0,
-        "y": 64,
-        "w": 48,
-        "h": 64
+        "y": 80,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "north_idle_01": {
+    "north_hoe_01": {
       "frame": {
-        "x": 48,
-        "y": 64,
-        "w": 48,
-        "h": 64
+        "x": 64,
+        "y": 80,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "north_idle_02": {
+    "north_hoe_02": {
       "frame": {
-        "x": 96,
-        "y": 64,
-        "w": 48,
-        "h": 64
+        "x": 128,
+        "y": 80,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "north_idle_03": {
-      "frame": {
-        "x": 144,
-        "y": 64,
-        "w": 48,
-        "h": 64
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 48,
-        "h": 64
-      },
-      "sourceSize": {
-        "w": 48,
-        "h": 64
-      },
-      "anchor": {
-        "x": 0.5,
-        "y": 0.953125
-      }
-    },
-    "north_walk_00": {
+    "north_hoe_03": {
       "frame": {
         "x": 192,
-        "y": 64,
-        "w": 48,
-        "h": 64
+        "y": 80,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "north_walk_01": {
+    "north_water_00": {
       "frame": {
-        "x": 240,
-        "y": 64,
-        "w": 48,
-        "h": 64
+        "x": 256,
+        "y": 80,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "north_walk_02": {
+    "north_water_01": {
       "frame": {
-        "x": 288,
-        "y": 64,
-        "w": 48,
-        "h": 64
+        "x": 320,
+        "y": 80,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "north_walk_03": {
-      "frame": {
-        "x": 336,
-        "y": 64,
-        "w": 48,
-        "h": 64
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 48,
-        "h": 64
-      },
-      "sourceSize": {
-        "w": 48,
-        "h": 64
-      },
-      "anchor": {
-        "x": 0.5,
-        "y": 0.953125
-      }
-    },
-    "north_walk_04": {
+    "north_water_02": {
       "frame": {
         "x": 384,
-        "y": 64,
-        "w": 48,
-        "h": 64
+        "y": 80,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "north_walk_05": {
+    "north_water_03": {
       "frame": {
-        "x": 432,
-        "y": 64,
-        "w": 48,
-        "h": 64
+        "x": 448,
+        "y": 80,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "north_walk_06": {
+    "north_harvest_00": {
       "frame": {
-        "x": 480,
-        "y": 64,
-        "w": 48,
-        "h": 64
+        "x": 512,
+        "y": 80,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "north_walk_07": {
+    "north_harvest_01": {
       "frame": {
-        "x": 528,
-        "y": 64,
-        "w": 48,
-        "h": 64
+        "x": 576,
+        "y": 80,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "west_idle_00": {
+    "north_harvest_02": {
+      "frame": {
+        "x": 640,
+        "y": 80,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "north_harvest_03": {
+      "frame": {
+        "x": 704,
+        "y": 80,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "west_hoe_00": {
       "frame": {
         "x": 0,
-        "y": 128,
-        "w": 48,
-        "h": 64
+        "y": 160,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "west_idle_01": {
+    "west_hoe_01": {
       "frame": {
-        "x": 48,
-        "y": 128,
-        "w": 48,
-        "h": 64
+        "x": 64,
+        "y": 160,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "west_idle_02": {
+    "west_hoe_02": {
       "frame": {
-        "x": 96,
-        "y": 128,
-        "w": 48,
-        "h": 64
+        "x": 128,
+        "y": 160,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "west_idle_03": {
-      "frame": {
-        "x": 144,
-        "y": 128,
-        "w": 48,
-        "h": 64
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 48,
-        "h": 64
-      },
-      "sourceSize": {
-        "w": 48,
-        "h": 64
-      },
-      "anchor": {
-        "x": 0.5,
-        "y": 0.953125
-      }
-    },
-    "west_walk_00": {
+    "west_hoe_03": {
       "frame": {
         "x": 192,
-        "y": 128,
-        "w": 48,
-        "h": 64
+        "y": 160,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "west_walk_01": {
+    "west_water_00": {
       "frame": {
-        "x": 240,
-        "y": 128,
-        "w": 48,
-        "h": 64
+        "x": 256,
+        "y": 160,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "west_walk_02": {
+    "west_water_01": {
       "frame": {
-        "x": 288,
-        "y": 128,
-        "w": 48,
-        "h": 64
+        "x": 320,
+        "y": 160,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "west_walk_03": {
-      "frame": {
-        "x": 336,
-        "y": 128,
-        "w": 48,
-        "h": 64
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 48,
-        "h": 64
-      },
-      "sourceSize": {
-        "w": 48,
-        "h": 64
-      },
-      "anchor": {
-        "x": 0.5,
-        "y": 0.953125
-      }
-    },
-    "west_walk_04": {
+    "west_water_02": {
       "frame": {
         "x": 384,
-        "y": 128,
-        "w": 48,
-        "h": 64
+        "y": 160,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "west_walk_05": {
+    "west_water_03": {
       "frame": {
-        "x": 432,
-        "y": 128,
-        "w": 48,
-        "h": 64
+        "x": 448,
+        "y": 160,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "west_walk_06": {
+    "west_harvest_00": {
       "frame": {
-        "x": 480,
-        "y": 128,
-        "w": 48,
-        "h": 64
+        "x": 512,
+        "y": 160,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "west_walk_07": {
+    "west_harvest_01": {
       "frame": {
-        "x": 528,
-        "y": 128,
-        "w": 48,
-        "h": 64
+        "x": 576,
+        "y": 160,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "east_idle_00": {
+    "west_harvest_02": {
+      "frame": {
+        "x": 640,
+        "y": 160,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "west_harvest_03": {
+      "frame": {
+        "x": 704,
+        "y": 160,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "east_hoe_00": {
       "frame": {
         "x": 0,
-        "y": 192,
-        "w": 48,
-        "h": 64
+        "y": 240,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "east_idle_01": {
+    "east_hoe_01": {
       "frame": {
-        "x": 48,
-        "y": 192,
-        "w": 48,
-        "h": 64
+        "x": 64,
+        "y": 240,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "east_idle_02": {
+    "east_hoe_02": {
       "frame": {
-        "x": 96,
-        "y": 192,
-        "w": 48,
-        "h": 64
+        "x": 128,
+        "y": 240,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "east_idle_03": {
-      "frame": {
-        "x": 144,
-        "y": 192,
-        "w": 48,
-        "h": 64
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 48,
-        "h": 64
-      },
-      "sourceSize": {
-        "w": 48,
-        "h": 64
-      },
-      "anchor": {
-        "x": 0.5,
-        "y": 0.953125
-      }
-    },
-    "east_walk_00": {
+    "east_hoe_03": {
       "frame": {
         "x": 192,
-        "y": 192,
-        "w": 48,
-        "h": 64
+        "y": 240,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "east_walk_01": {
+    "east_water_00": {
       "frame": {
-        "x": 240,
-        "y": 192,
-        "w": 48,
-        "h": 64
+        "x": 256,
+        "y": 240,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "east_walk_02": {
+    "east_water_01": {
       "frame": {
-        "x": 288,
-        "y": 192,
-        "w": 48,
-        "h": 64
+        "x": 320,
+        "y": 240,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "east_walk_03": {
-      "frame": {
-        "x": 336,
-        "y": 192,
-        "w": 48,
-        "h": 64
-      },
-      "rotated": false,
-      "trimmed": false,
-      "spriteSourceSize": {
-        "x": 0,
-        "y": 0,
-        "w": 48,
-        "h": 64
-      },
-      "sourceSize": {
-        "w": 48,
-        "h": 64
-      },
-      "anchor": {
-        "x": 0.5,
-        "y": 0.953125
-      }
-    },
-    "east_walk_04": {
+    "east_water_02": {
       "frame": {
         "x": 384,
-        "y": 192,
-        "w": 48,
-        "h": 64
+        "y": 240,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "east_walk_05": {
+    "east_water_03": {
       "frame": {
-        "x": 432,
-        "y": 192,
-        "w": 48,
-        "h": 64
+        "x": 448,
+        "y": 240,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "east_walk_06": {
+    "east_harvest_00": {
       "frame": {
-        "x": 480,
-        "y": 192,
-        "w": 48,
-        "h": 64
+        "x": 512,
+        "y": 240,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
       }
     },
-    "east_walk_07": {
+    "east_harvest_01": {
       "frame": {
-        "x": 528,
-        "y": 192,
-        "w": 48,
-        "h": 64
+        "x": 576,
+        "y": 240,
+        "w": 64,
+        "h": 80
       },
       "rotated": false,
       "trimmed": false,
       "spriteSourceSize": {
         "x": 0,
         "y": 0,
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "sourceSize": {
-        "w": 48,
-        "h": 64
+        "w": 64,
+        "h": 80
       },
       "anchor": {
         "x": 0.5,
-        "y": 0.953125
+        "y": 0.8125
+      }
+    },
+    "east_harvest_02": {
+      "frame": {
+        "x": 640,
+        "y": 240,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "east_harvest_03": {
+      "frame": {
+        "x": 704,
+        "y": 240,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
       }
     }
   },
   "animations": {
-    "idle_south": {
+    "hoe_south": {
       "frames": [
-        "south_idle_00",
-        "south_idle_01",
-        "south_idle_02",
-        "south_idle_03"
+        "south_hoe_00",
+        "south_hoe_01",
+        "south_hoe_02",
+        "south_hoe_03"
       ],
-      "fps": 3,
-      "repeat": -1
+      "fps": 5,
+      "repeat": 0
     },
-    "walk_south": {
+    "water_south": {
       "frames": [
-        "south_walk_00",
-        "south_walk_01",
-        "south_walk_02",
-        "south_walk_03",
-        "south_walk_04",
-        "south_walk_05",
-        "south_walk_06",
-        "south_walk_07"
+        "south_water_00",
+        "south_water_01",
+        "south_water_02",
+        "south_water_03"
       ],
-      "fps": 8,
-      "repeat": -1
+      "fps": 5,
+      "repeat": 0
     },
-    "idle_north": {
+    "harvest_south": {
       "frames": [
-        "north_idle_00",
-        "north_idle_01",
-        "north_idle_02",
-        "north_idle_03"
+        "south_harvest_00",
+        "south_harvest_01",
+        "south_harvest_02",
+        "south_harvest_03"
       ],
-      "fps": 3,
-      "repeat": -1
+      "fps": 5,
+      "repeat": 0
     },
-    "walk_north": {
+    "hoe_north": {
       "frames": [
-        "north_walk_00",
-        "north_walk_01",
-        "north_walk_02",
-        "north_walk_03",
-        "north_walk_04",
-        "north_walk_05",
-        "north_walk_06",
-        "north_walk_07"
+        "north_hoe_00",
+        "north_hoe_01",
+        "north_hoe_02",
+        "north_hoe_03"
       ],
-      "fps": 8,
-      "repeat": -1
+      "fps": 5,
+      "repeat": 0
     },
-    "idle_west": {
+    "water_north": {
       "frames": [
-        "west_idle_00",
-        "west_idle_01",
-        "west_idle_02",
-        "west_idle_03"
+        "north_water_00",
+        "north_water_01",
+        "north_water_02",
+        "north_water_03"
       ],
-      "fps": 3,
-      "repeat": -1
+      "fps": 5,
+      "repeat": 0
     },
-    "walk_west": {
+    "harvest_north": {
       "frames": [
-        "west_walk_00",
-        "west_walk_01",
-        "west_walk_02",
-        "west_walk_03",
-        "west_walk_04",
-        "west_walk_05",
-        "west_walk_06",
-        "west_walk_07"
+        "north_harvest_00",
+        "north_harvest_01",
+        "north_harvest_02",
+        "north_harvest_03"
       ],
-      "fps": 8,
-      "repeat": -1
+      "fps": 5,
+      "repeat": 0
     },
-    "idle_east": {
+    "hoe_west": {
       "frames": [
-        "east_idle_00",
-        "east_idle_01",
-        "east_idle_02",
-        "east_idle_03"
+        "west_hoe_00",
+        "west_hoe_01",
+        "west_hoe_02",
+        "west_hoe_03"
       ],
-      "fps": 3,
-      "repeat": -1
+      "fps": 5,
+      "repeat": 0
     },
-    "walk_east": {
+    "water_west": {
       "frames": [
-        "east_walk_00",
-        "east_walk_01",
-        "east_walk_02",
-        "east_walk_03",
-        "east_walk_04",
-        "east_walk_05",
-        "east_walk_06",
-        "east_walk_07"
+        "west_water_00",
+        "west_water_01",
+        "west_water_02",
+        "west_water_03"
       ],
-      "fps": 8,
-      "repeat": -1
+      "fps": 5,
+      "repeat": 0
+    },
+    "harvest_west": {
+      "frames": [
+        "west_harvest_00",
+        "west_harvest_01",
+        "west_harvest_02",
+        "west_harvest_03"
+      ],
+      "fps": 5,
+      "repeat": 0
+    },
+    "hoe_east": {
+      "frames": [
+        "east_hoe_00",
+        "east_hoe_01",
+        "east_hoe_02",
+        "east_hoe_03"
+      ],
+      "fps": 5,
+      "repeat": 0
+    },
+    "water_east": {
+      "frames": [
+        "east_water_00",
+        "east_water_01",
+        "east_water_02",
+        "east_water_03"
+      ],
+      "fps": 5,
+      "repeat": 0
+    },
+    "harvest_east": {
+      "frames": [
+        "east_harvest_00",
+        "east_harvest_01",
+        "east_harvest_02",
+        "east_harvest_03"
+      ],
+      "fps": 5,
+      "repeat": 0
     }
   },
-  "sourceKeyPosesPerDirection": 4,
-  "walkConstruction": "source key poses + nearest-neighbour motion transport",
   "meta": {
-    "image": "default.png",
+    "image": "male_actions.png",
     "size": {
-      "w": 576,
-      "h": 256
+      "w": 768,
+      "h": 320
     },
     "scale": "1"
-  }
+  },
+  "limitations": "4 key poses per direction/action, baked tools, not layer compatible, ground anchor preliminary, action timing not gameplay-authoritative"
 }

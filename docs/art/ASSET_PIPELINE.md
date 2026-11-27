@@ -28,3 +28,5 @@ ART01–05见 DESIGN.md；固定 seed/日期/镜头截图、资产来源和版�
 
 
 候选资产位于 assets/candidates/，必须明确待验收，不得自动引入正式 public/assets。A06-V2当前使用可见像素分区换色、独立帽子；不同轮廓服装/发型需后续真实遮挡层制作，用户验收后再转正式资产。
+
+A06-V2用户视觉验收通过，实际图集迁入 assets/source/characters/character_v2/；原候选路径保留迁移说明。农业动作原稿及裁切候选在 farming_actions_v1/，未完成动作层拆分和引擎验收，不自动发布。

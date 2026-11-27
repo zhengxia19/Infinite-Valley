@@ -1,0 +1,1302 @@
+{
+  "assetId": "female_farm_actions_v1",
+  "status": "art_approved_source_runtime_candidate",
+  "frameSize": [
+    64,
+    80
+  ],
+  "characterDisplayFrame": [
+    48,
+    64
+  ],
+  "tileSize": 32,
+  "anchorPx": [
+    32,
+    65
+  ],
+  "frames": {
+    "south_hoe_00": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "south_hoe_01": {
+      "frame": {
+        "x": 64,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "south_hoe_02": {
+      "frame": {
+        "x": 128,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "south_hoe_03": {
+      "frame": {
+        "x": 192,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "south_water_00": {
+      "frame": {
+        "x": 256,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "south_water_01": {
+      "frame": {
+        "x": 320,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "south_water_02": {
+      "frame": {
+        "x": 384,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "south_water_03": {
+      "frame": {
+        "x": 448,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "south_harvest_00": {
+      "frame": {
+        "x": 512,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "south_harvest_01": {
+      "frame": {
+        "x": 576,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "south_harvest_02": {
+      "frame": {
+        "x": 640,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "south_harvest_03": {
+      "frame": {
+        "x": 704,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "north_hoe_00": {
+      "frame": {
+        "x": 0,
+        "y": 80,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "north_hoe_01": {
+      "frame": {
+        "x": 64,
+        "y": 80,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "north_hoe_02": {
+      "frame": {
+        "x": 128,
+        "y": 80,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "north_hoe_03": {
+      "frame": {
+        "x": 192,
+        "y": 80,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "north_water_00": {
+      "frame": {
+        "x": 256,
+        "y": 80,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "north_water_01": {
+      "frame": {
+        "x": 320,
+        "y": 80,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "north_water_02": {
+      "frame": {
+        "x": 384,
+        "y": 80,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "north_water_03": {
+      "frame": {
+        "x": 448,
+        "y": 80,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "north_harvest_00": {
+      "frame": {
+        "x": 512,
+        "y": 80,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "north_harvest_01": {
+      "frame": {
+        "x": 576,
+        "y": 80,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "north_harvest_02": {
+      "frame": {
+        "x": 640,
+        "y": 80,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "north_harvest_03": {
+      "frame": {
+        "x": 704,
+        "y": 80,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "west_hoe_00": {
+      "frame": {
+        "x": 0,
+        "y": 160,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "west_hoe_01": {
+      "frame": {
+        "x": 64,
+        "y": 160,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "west_hoe_02": {
+      "frame": {
+        "x": 128,
+        "y": 160,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "west_hoe_03": {
+      "frame": {
+        "x": 192,
+        "y": 160,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "west_water_00": {
+      "frame": {
+        "x": 256,
+        "y": 160,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "west_water_01": {
+      "frame": {
+        "x": 320,
+        "y": 160,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "west_water_02": {
+      "frame": {
+        "x": 384,
+        "y": 160,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "west_water_03": {
+      "frame": {
+        "x": 448,
+        "y": 160,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "west_harvest_00": {
+      "frame": {
+        "x": 512,
+        "y": 160,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "west_harvest_01": {
+      "frame": {
+        "x": 576,
+        "y": 160,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "west_harvest_02": {
+      "frame": {
+        "x": 640,
+        "y": 160,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "west_harvest_03": {
+      "frame": {
+        "x": 704,
+        "y": 160,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "east_hoe_00": {
+      "frame": {
+        "x": 0,
+        "y": 240,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "east_hoe_01": {
+      "frame": {
+        "x": 64,
+        "y": 240,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "east_hoe_02": {
+      "frame": {
+        "x": 128,
+        "y": 240,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "east_hoe_03": {
+      "frame": {
+        "x": 192,
+        "y": 240,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "east_water_00": {
+      "frame": {
+        "x": 256,
+        "y": 240,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "east_water_01": {
+      "frame": {
+        "x": 320,
+        "y": 240,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "east_water_02": {
+      "frame": {
+        "x": 384,
+        "y": 240,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "east_water_03": {
+      "frame": {
+        "x": 448,
+        "y": 240,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "east_harvest_00": {
+      "frame": {
+        "x": 512,
+        "y": 240,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "east_harvest_01": {
+      "frame": {
+        "x": 576,
+        "y": 240,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "east_harvest_02": {
+      "frame": {
+        "x": 640,
+        "y": 240,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    },
+    "east_harvest_03": {
+      "frame": {
+        "x": 704,
+        "y": 240,
+        "w": 64,
+        "h": 80
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 64,
+        "h": 80
+      },
+      "sourceSize": {
+        "w": 64,
+        "h": 80
+      },
+      "anchor": {
+        "x": 0.5,
+        "y": 0.8125
+      }
+    }
+  },
+  "animations": {
+    "hoe_south": {
+      "frames": [
+        "south_hoe_00",
+        "south_hoe_01",
+        "south_hoe_02",
+        "south_hoe_03"
+      ],
+      "fps": 5,
+      "repeat": 0
+    },
+    "water_south": {
+      "frames": [
+        "south_water_00",
+        "south_water_01",
+        "south_water_02",
+        "south_water_03"
+      ],
+      "fps": 5,
+      "repeat": 0
+    },
+    "harvest_south": {
+      "frames": [
+        "south_harvest_00",
+        "south_harvest_01",
+        "south_harvest_02",
+        "south_harvest_03"
+      ],
+      "fps": 5,
+      "repeat": 0
+    },
+    "hoe_north": {
+      "frames": [
+        "north_hoe_00",
+        "north_hoe_01",
+        "north_hoe_02",
+        "north_hoe_03"
+      ],
+      "fps": 5,
+      "repeat": 0
+    },
+    "water_north": {
+      "frames": [
+        "north_water_00",
+        "north_water_01",
+        "north_water_02",
+        "north_water_03"
+      ],
+      "fps": 5,
+      "repeat": 0
+    },
+    "harvest_north": {
+      "frames": [
+        "north_harvest_00",
+        "north_harvest_01",
+        "north_harvest_02",
+        "north_harvest_03"
+      ],
+      "fps": 5,
+      "repeat": 0
+    },
+    "hoe_west": {
+      "frames": [
+        "west_hoe_00",
+        "west_hoe_01",
+        "west_hoe_02",
+        "west_hoe_03"
+      ],
+      "fps": 5,
+      "repeat": 0
+    },
+    "water_west": {
+      "frames": [
+        "west_water_00",
+        "west_water_01",
+        "west_water_02",
+        "west_water_03"
+      ],
+      "fps": 5,
+      "repeat": 0
+    },
+    "harvest_west": {
+      "frames": [
+        "west_harvest_00",
+        "west_harvest_01",
+        "west_harvest_02",
+        "west_harvest_03"
+      ],
+      "fps": 5,
+      "repeat": 0
+    },
+    "hoe_east": {
+      "frames": [
+        "east_hoe_00",
+        "east_hoe_01",
+        "east_hoe_02",
+        "east_hoe_03"
+      ],
+      "fps": 5,
+      "repeat": 0
+    },
+    "water_east": {
+      "frames": [
+        "east_water_00",
+        "east_water_01",
+        "east_water_02",
+        "east_water_03"
+      ],
+      "fps": 5,
+      "repeat": 0
+    },
+    "harvest_east": {
+      "frames": [
+        "east_harvest_00",
+        "east_harvest_01",
+        "east_harvest_02",
+        "east_harvest_03"
+      ],
+      "fps": 5,
+      "repeat": 0
+    }
+  },
+  "meta": {
+    "image": "female_actions.png",
+    "size": {
+      "w": 768,
+      "h": 320
+    },
+    "scale": "1"
+  },
+  "limitations": "4 key poses per direction/action, baked tools, not layer compatible, ground anchor preliminary, action timing not gameplay-authoritative"
+}

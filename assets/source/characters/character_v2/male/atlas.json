@@ -1,6 +1,6 @@
 {
-  "assetId": "player_female_v2",
-  "status": "candidate_pending_visual_review",
+  "assetId": "player_male_v2",
+  "status": "visual_approved_pending_engine_integration",
   "frameSize": [
     48,
     64
