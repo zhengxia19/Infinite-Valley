@@ -19,7 +19,7 @@ records 存结构化值/typed array，chunkDelta key = "cx,cy"，每条包含 re
 
 ## 事务策略
 运行时 GameSession 单写；每30秒自动保存，睡眠/交易/建造/迁移住所/导出/退出额外触发，禁止多笔保存并行。dirty version tracking 获取一致快照（短暂冻结命令），序列化在事务前完成；readwrite 事务覆盖 worlds/records/heads/snapshots/locks。读取锁 token/epoch 与 headRevision，若不匹配中止；写新revision所有 dirty记录和删除墓碑，更新 heads 的 current/previous 指针、保存变更索引、更新 world head 最后提交。只有 transaction complete 才显示“已保存”；中止则保留上一有效revision、dirty标记与当前内存状态。写期间发生更新按新 dirty generation 下一次保存，不能错误清空。采用 durability strict 若支持，不宣称抗硬断电保证。
-保留最近两个完整逻辑保存点：对本次未变更记录，previous snapshot 继续引用同一 current；对本次变更项，通过 snapshots 的变更索引回到前一指针。清理在另一个事务中，只回收两个可达版本都未引用的记录；不允许每30秒复制全量探索地图。恢复检查引用、版本、数量与状态约束；当前损坏则尝试previous并明确提示损失，不覆盖原件。导出前先成功保存；使用完整一致revision读取，不从多个不同提交拼接。
+保留最近两个完整逻辑保存点：对本次未变更记录，previous snapshot 继续引用同一 current；对本次变更项，通过 snapshots 的变更索引回到前一指针。清理在另一个事务中，只回收两个可达版本都未引用的记录；不允许每30秒复制全量探索地图。恢复检查引用、版本、数量与状态约束；当前损坏则尝试previous并明确提示损失，不覆盖原件。普通导出前先成功保存；使用完整一致revision读取，不从多个不同提交拼接。若写入失败，另提供明确标注“紧急未保存快照”的导出：暂停命令，基于当前已读的完整有效revision叠加内存dirty记录及墓碑，生成一致的独立文件；不写回数据库、不显示已保存；失锁时只能导入为新世界。若基础记录不可读取则提示无法完整导出，同时允许导出最后仍可读的已保存版本，严禁静默省略记录。
 
 ## 跨标签与生命周期
 优先 Web Locks API 对 worldId 加排他锁；仍通过数据库内 epoch+revision CAS 防旧会话写入。无 Web Locks 时 IDB 事务原子取得带租约的 writer token；每10秒心跳、30秒租约初值，恢复页面检查token和revision；失锁暂停写入并提示另一个窗口已打开，允许导出本地未保存状态到新世界，不覆盖已提交记录。标签后台不保证计时/卸载保存，进入hidden时尽早保存与暂停；已完成提交才有保证，不依赖beforeunload 异步任务。
@@ -27,4 +27,4 @@ records 存结构化值/typed array，chunkDelta key = "cx,cy"，每条包含 re
 
 ## 导入导出
 文件 .ivsave，v1采用UTF-8 JSON（可选gzip以后再评估），含 manifest{formatVersion,world,recordCount,checksum} 和 records；checksum SHA-256 对固定序列化字节计算，用于完整性不是签名。导入只解析数据，不执行脚本/URL/HTML；检查文件体积（初始上限100MiB、记录数及深度限制，G3根据配额修订）、schema、版本、唯一键、坐标范围、整数非负、内容ID、交叉引用和checksum；未知字段按 schema 规则处理。先暂存并验证，原子导入为新worldId，重映射外层worldId，内部实例关系保持。重复导入不得覆盖旧世界；删除需明确确认，不级联其他世界。迁移在副本中执行并测试从旧版本到新版本，失败保留原文件。发布时同时测试向前迁移和旧版拒读新档。
-验收 SAVE01 刷新/强退（最后成功保存点）/离屏资源；SAVE02 写事务abort/配额不足不丢旧档；SAVE03 两标签CAS防覆盖；SAVE04 导出→清站点→导入状态hash相等；SAVE05 旧生成版本底图不变；SAVE06 损坏/恶意导入拒绝、上一保存点可恢复。
+验收 SAVE01 刷新/强退（最后成功保存点）/离屏资源；SAVE02 写事务abort/配额不足不丢旧档；SAVE03 两标签CAS防覆盖；SAVE04 导出→清站点→导入状态hash相等；SAVE05 旧生成版本底图不变；SAVE06 损坏/恶意导入拒绝、上一保存点可恢复；SAVE07 模拟写失败和失锁，紧急导出可独立导入且不覆盖现有世界。
