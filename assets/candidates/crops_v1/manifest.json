@@ -1,0 +1,404 @@
+{
+  "batch": "crops_v1",
+  "status": "candidate_unreviewed",
+  "source": "original native-pixel raster artwork; no third-party image",
+  "sourceFile": "crops.png",
+  "frameWidth": 32,
+  "frameHeight": 48,
+  "stageNames": [
+    "播种",
+    "幼苗",
+    "生长",
+    "接近成熟",
+    "成熟"
+  ],
+  "crops": [
+    "radish",
+    "cucumber",
+    "carrot",
+    "spinach"
+  ],
+  "records": [
+    {
+      "id": "crop_radish_0",
+      "x": 0,
+      "y": 0,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 0,
+      "pixels": 38
+    },
+    {
+      "id": "crop_radish_1",
+      "x": 32,
+      "y": 0,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 1,
+      "pixels": 88
+    },
+    {
+      "id": "crop_radish_2",
+      "x": 64,
+      "y": 0,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 2,
+      "pixels": 240
+    },
+    {
+      "id": "crop_radish_3",
+      "x": 96,
+      "y": 0,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 3,
+      "pixels": 378
+    },
+    {
+      "id": "crop_radish_4",
+      "x": 128,
+      "y": 0,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 4,
+      "pixels": 487
+    },
+    {
+      "id": "crop_cucumber_0",
+      "x": 0,
+      "y": 48,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 0,
+      "pixels": 38
+    },
+    {
+      "id": "crop_cucumber_1",
+      "x": 32,
+      "y": 48,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 1,
+      "pixels": 97
+    },
+    {
+      "id": "crop_cucumber_2",
+      "x": 64,
+      "y": 48,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 2,
+      "pixels": 348
+    },
+    {
+      "id": "crop_cucumber_3",
+      "x": 96,
+      "y": 48,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 3,
+      "pixels": 440
+    },
+    {
+      "id": "crop_cucumber_4",
+      "x": 128,
+      "y": 48,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 4,
+      "pixels": 641
+    },
+    {
+      "id": "crop_carrot_0",
+      "x": 0,
+      "y": 96,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 0,
+      "pixels": 38
+    },
+    {
+      "id": "crop_carrot_1",
+      "x": 32,
+      "y": 96,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 1,
+      "pixels": 88
+    },
+    {
+      "id": "crop_carrot_2",
+      "x": 64,
+      "y": 96,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 2,
+      "pixels": 297
+    },
+    {
+      "id": "crop_carrot_3",
+      "x": 96,
+      "y": 96,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 3,
+      "pixels": 349
+    },
+    {
+      "id": "crop_carrot_4",
+      "x": 128,
+      "y": 96,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 4,
+      "pixels": 406
+    },
+    {
+      "id": "crop_spinach_0",
+      "x": 0,
+      "y": 144,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 0,
+      "pixels": 38
+    },
+    {
+      "id": "crop_spinach_1",
+      "x": 32,
+      "y": 144,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 1,
+      "pixels": 97
+    },
+    {
+      "id": "crop_spinach_2",
+      "x": 64,
+      "y": 144,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 2,
+      "pixels": 319
+    },
+    {
+      "id": "crop_spinach_3",
+      "x": 96,
+      "y": 144,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 3,
+      "pixels": 407
+    },
+    {
+      "id": "crop_spinach_4",
+      "x": 128,
+      "y": 144,
+      "w": 32,
+      "h": 48,
+      "anchor": [
+        16,
+        48
+      ],
+      "footprint": [
+        1,
+        1
+      ],
+      "collision": null,
+      "occlusionParts": [],
+      "stage": 4,
+      "pixels": 517
+    }
+  ],
+  "licenseRef": "project-original; no third-party source"
+}

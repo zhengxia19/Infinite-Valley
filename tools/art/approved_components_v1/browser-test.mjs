@@ -13,6 +13,10 @@ try{
  await page.waitForFunction(()=>Number(document.querySelector("#hud").dataset.x)===416);
  await page.keyboard.down("ArrowRight");try{await page.waitForFunction(()=>Number(document.querySelector("#hud").dataset.x)>920,{},{timeout:20000})}finally{await page.keyboard.up("ArrowRight")}
  const crossedX=Number(await hud.getAttribute("data-x"));assert(crossedX>920);
+ await page.getByRole("button",{name:"查看农田样片"}).click();
+ await page.waitForFunction(()=>{const h=document.querySelector("#hud").dataset;return h.cropCount==="20"&&Number(h.x)===224&&Number(h.y)===200});
+ await mkdir("test-results/asset-review",{recursive:true});await page.screenshot({path:"test-results/asset-review/crops.png"});
+
  await page.getByRole("combobox",{name:"季节"}).selectOption("winter");await page.waitForFunction(()=>document.querySelector("#hud").dataset.season==="winter");
  await page.getByRole("combobox",{name:"缩放"}).selectOption("2");await page.waitForFunction(()=>document.querySelector("#hud").dataset.zoom==="2");
  await page.getByRole("button",{name:"开启围栏门"}).click();await page.waitForFunction(()=>document.querySelector("#hud").dataset.gate==="true");
