@@ -56,10 +56,10 @@ export async function startAssetReview(held:Set<string>){
   }
   private resetPosition(){this.px=this.layout.spawn.x;this.py=this.layout.spawn.y;this.target=null;this.cameras.main.centerOn(this.px,this.py)}
   create(){
-   if(!Object.keys(manifest.records).every(id=>this.textures.exists(id))||!this.textures.exists("approved-actor")){hud.textContent="实际素材加载不完整";return}
+   if(!Object.keys(manifest.records).every(id=>this.textures.exists(id))||!this.textures.exists("approved-actor")||!Object.values(manifest.layouts).every(l=>l.chunks.every(c=>this.textures.exists(c.id)))){hud.textContent="实际素材加载不完整";return}
    this.player=this.add.sprite(0,0,"approved-actor",0).setOrigin(.5,61/64);
-   this.build();this.initialized=true;
-   scene.onchange=()=>this.build();season.onchange=()=>{for(const p of this.props){if(p.item.type!=="tree")continue;const id=p.item.id+"_"+season.value,layered=!!manifest.registrations[id];p.lower.setTexture(layered?id+"_lower":id);if(p.upper)p.upper.destroy();p.upper=layered?this.image(id+"_upper",p.item.x,p.item.y,p.item.y+.25):undefined}};
+   this.build();this.initialized=true;hud.dataset.reviewReady="true";
+   scene.onchange=()=>this.build();season.onchange=()=>{for(const p of this.props){if(p.item.type!=="tree")continue;const id=p.item.id+"_"+season.value,layered=!!manifest.registrations[id];p.lower.setTexture(layered?id+"_lower":id);if(p.upper){this.layerObjects=this.layerObjects.filter(o=>o!==p.upper);p.upper.destroy()}p.upper=layered?this.image(id+"_upper",p.item.x,p.item.y,p.item.y+.25):undefined}};
    zoom.onchange=()=>this.cameras.main.setZoom(Number(zoom.value));
    gate.onclick=()=>{this.open=!this.open;gate.textContent=this.open?"关闭围栏门":"开启围栏门";for(const p of this.props)if(p.item.type==="gate")p.lower.setTexture(this.open?"gate_open":"gate_closed")};
    reset.onclick=()=>this.resetPosition();
@@ -78,6 +78,7 @@ export async function startAssetReview(held:Set<string>){
    this.player.setFrame(this.direction*12+f).setPosition(Math.round(this.px),Math.round(this.py)).setDepth(this.py+.1);
    for(const p of this.props){if(!p.upper)continue;const near=this.py<p.item.y&&this.py>p.item.y-p.upper.height&&Math.abs(this.px-p.item.x)<p.upper.width/2; p.upper.setAlpha(near?.45:1)}
    this.cameras.main.centerOn(Math.round(this.px),Math.round(this.py));
+   hud.dataset.scene=scene.value;hud.dataset.season=season.value;hud.dataset.x=String(this.px);hud.dataset.y=String(this.py);hud.dataset.gate=String(this.open);hud.dataset.zoom=zoom.value;hud.dataset.frame=String(this.direction*12+f);hud.dataset.occluded=String(this.props.filter(p=>p.upper&&p.upper.alpha<1).length);
    hud.textContent="环境素材 Phaser 验收预览（非正式世界）\n"+scene.value+" · "+season.value+" · "+manifest.sourceCount+" 个源组件\n坐标 "+Math.round(this.px)+", "+Math.round(this.py)+" · WASD / 方向键 / 触屏";
   }
  }
