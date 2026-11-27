@@ -1,98 +1,38 @@
-# Infinite Valley 文档规划与设计工作清单
-
-版本：v1.1 | 日期：2026-11-27 | 状态：两轮用户确认后的设计规划基线
-  
-## 1. 项目定位与约束
-
-Infinite Valley（无限山谷）是一款浏览器端二维俯视角、程序化开放世界、自由探索、采集、种植、制作、建造的单机沙盒游戏。借鉴星露谷物语的田园经营体验和 Minecraft 的自由探索与建造机制，不复制其素材、代码或世界内容。
-
-- 已明确：视觉方向沿用用户选定的此前第四节参考（温馨细腻的俯视像素农场、自然开放世界；仅前两组为视觉锚点），不是等距视角或低多边形 3D；32×32 基础地块已确认，色板和实际素材须由美术样片验证。
-- 延续前期方案：浏览器本地模拟、静态部署、PC 和手机、无运行时 LLM、单机优先。
-- 已确认技术：Phaser 4 + TypeScript + Vite，IndexedDB 存档；Worker、PWA 按技术设计实施并验证。不并行维护两个游戏引擎。
-- V1.0 不做地下世界、战斗、死亡、饥饿、联机、云存档、账号体系、复杂生态演化或运行时 AI 服务；基本村庄、商人、动物和资源再生属于 V1.0。
-- 所有文件路径采用英文，正文采用中文；本清单不等于已完成各项设计，不承诺尚未实测的性能。
-- 仓库已有 MIT LICENSE（已回读）；保留原文件。商业模式、发布域名及第三方素材授权尚未确定，不得引入不明授权素材。
-
-## 2. 文档清单
-
-P0：首个可玩版本前必需；P1：对应功能开发前必需；P2：正式发布前完善。D01–D21 已形成正式文字设计，尚需按 ROADMAP 评审和验证；D22–D23 在发布前按实际实现完成。只有满足验收要求才可标记通过。D 编号为稳定引用标识。GDD 负责玩法意图，专项文档负责详细规则，避免重复维护。
-
-| ID | 路径 | 优先级 | 主要内容与完成条件 | 前置 |
-|---|---|---|---|---|
-| D01 | docs/design/PRODUCT_VISION.md | P0 | 目标用户、设计支柱、差异化、游戏范围、非目标、成功标准；明确首版范围 | 无 |
-| D02 | docs/design/GAME_DESIGN.md | P0 | GDD：核心循环、玩家成长、时间机制、探索/采集/种植/制作/建造总览、失败与恢复；定义首个可玩闭环 | D01 |
-| D03 | DESIGN.md | P0 | 美术与界面设计总纲：参考图索引、俯视投影、色板、光照、比例、字体、像素密度、统一视觉样片、禁用风格；用户确认样片 | D01 |
-| D04 | docs/design/UX_AND_CONTROLS.md | P0 | PC/触屏操作、HUD、快捷栏、背包、地图、建造交互、暂停、可访问性、响应式布局；有交互线框及状态表 | D02,D03 |
-| D05 | docs/design/WORLD_GENERATION.md | P0 | 世界坐标、Seed、生成器版本、区块生命周期、地形水系、生态群系、资源分布、出生点与可达性、地图接缝、地表可达性与探索节奏；定义跨区块一致性验收 | D02,D03 |
-| D06 | docs/design/GAMEPLAY_SYSTEMS.md | P0 | 角色/工具/采集/背包/物品/制作/建造/农业/日历等系统详细规则，前置条件、状态变化、失败反馈、边界情形；能构成完整首版玩法 | D02,D05 |
-| D07 | docs/design/CONTENT_AND_BALANCE.md | P0 | 初版物品、配方、作物、建筑、资源产出、成长节奏、经济假设；定义数据字典、数值来源及平衡测试；后续实际内容以数据文件为准 | D06 |
-| D08 | docs/design/NPC_AND_ECOLOGY.md | P0（V1.0 扩展功能前） | NPC 日程、寻路、动物、资源再生、离屏模拟、经济及生态；确定开销上限，不使用运行时 LLM | D05,D06,D07 |
-| D09 | docs/art/ASSET_PIPELINE.md | P0 | 素材尺寸/图集/锚点/遮挡/Y排序/帧动画/地形过渡/音效/命名、来源登记、AI 素材生成和一致性验收；输出可实际导入引擎的样片 | D03,D04 |
-| D10 | docs/engineering/ARCHITECTURE.md | P0 | 技术设计 TDD：模拟与表现分离、时钟、输入命令、事件、状态所有权、模块边界、生命周期、线程策略；组件依赖图与原型选型依据 | D02,D04,D05,D06 |
-| D11 | docs/engineering/DATA_AND_SAVE.md | P0 | 稳定内容 ID、数据 Schema、世界 Seed+生成版本+增量存档、事务/迁移/导出导入/损坏恢复、存储配额；验证回访与版本升级不丢世界修改 | D05,D06,D10 |
-| D12 | docs/engineering/PERFORMANCE.md | P0 | PC/手机目标设备、帧时间、内存、加载体积、区块预算、渲染与模拟预算、测试种子及测量方法；给出目标和实测结果的区别 | D05,D09,D10 |
-| D13 | docs/engineering/TEST_AND_ACCEPTANCE.md | P0 | 单元、性质测试、确定性/接缝/负坐标、存档回归、游戏流程 E2E、视觉对比、手机触控、长时间运行；需求 ID 与用例追踪 | D04,D05,D06,D10,D11,D12 |
-| D14 | docs/engineering/DEPLOYMENT.md | P0 | 本地开发、构建、静态托管、HTTPS、缓存与版本升级、离线策略、回滚；验证无后端服务也能完成游戏闭环 | D10,D11,D13 |
-| D15 | AGENTS.md | P0 | AI Agent 工作规则、文档优先、任务边界、依赖控制、代码风格、测试证据、禁止过度抽象及未授权范围变更；只索引详细规范，不重复 | D01,D10,D13 |
-| D16 | docs/engineering/DEVELOPMENT_GUIDE.md | P0 | 环境、命令、目录约定、分支/提交规范、调试、内容扩展、CI 与完成定义；可复现构建及验证 | D10,D13 |
-| D17 | docs/ROADMAP.md | P0 | 里程碑、任务拆分、前置依赖、验收门槛、可玩交付物；不以虚构工期替代验证 | D01,D02；基线在 D13 后更新 |
-| D18 | docs/REFERENCES.md | P0 | 参考项目、版本或 commit、借鉴点、适用边界、代码复用判断及许可证来源；区别参考与复用 | 无，持续更新 |
-| D19 | docs/decisions/README.md | P0 | ADR 索引与模板：背景、备选项、决策、理由、后果、验证、状态；重要决策另建编号文件 | D01 |
-| D20 | README.md | P0 | 项目简介、当前状态、文档入口、运行和构建方法（实际可用后补）；不宣传未实现功能 | D01 |
-| D21 | THIRD_PARTY_NOTICES.md | P0 | 第三方代码、素材、字体、音频、许可、作者、来源、修改情况；引入资源前登记，发布前完整审计 | D09,D18 |
-| D22 | CHANGELOG.md | P2 | 面向玩家的变更记录、兼容性及存档迁移提示；首个公开版本起维护 | D11,D17 |
-| D23 | docs/PLAYER_GUIDE.md | P2 | 实际游戏操作、玩法说明、存档备份及故障处理；与已实现内容一致 | D04,D06,D14 |
-
-不另建重复的 PRD、SRS、API 文档或每个简单功能的设计文件。只有专项规则复杂到无法在现有文档维护时才拆分。保留现有 MIT LICENSE；内容数据、素材清单、自动测试和构建配置不计入上述 23 份规划文档。
-
-## 3. 设计与实施顺序
-
-| 阶段 | 工作 | 退出门槛 |
+# Infinite Valley 文档规划 v2.0
+2026-11-27 · 第三轮用户确认：单一共享在线世界。替代 v1.1 的单机与静态托管约束；原 D 编号保持稳定。
+## 基线
+唯一正式世界；管理员独占创建/销毁权。游客临时角色、可注册原地升级或导出；注册用户名+密码，无邮箱手机号；注册者跨设备恢复角色及同一世界进度。人类与AI同规则，Agent API+本地MCP+游戏Skill，可自主游玩或授权接管、人类随时夺回。Phaser4+TS+Vite、32px两组主视觉、无地下/战斗/死亡。服务器权威状态，客户端渲染、预测、寻路，服务器无GPU/模型推理。旧单机基线废止。
+## 文档索引
+| ID | 文件 | 阶段 |
 |---|---|---|
-| G0 项目定义 | D01、D18、D19、D20、D17初稿 | 范围、非目标和参考来源明确 |
-| G1 游戏及美术 | D02、D03、D04、D05、D06、D07、D08、D09 | 可玩闭环规则完整；两组视觉锚点转成一致样片；用户确认视觉基线 |
-| G2 技术设计 | D10、D11、D12、D13、D14、D15、D16、D21，更新 D17 | 核心接口、性能预算、存档契约和验收方案明确；技术风险有验证任务；授权清晰 |
-| G3 技术原型 | 同 Seed 不同加载顺序生成一致、区块边界/负坐标、玩家穿越区块、像素渲染、存档重载、手机输入 | 提供真实浏览器截图、测试及性能记录；不达标先修订设计 |
-| G4 首个可玩版本 | 探索→采集→制作→建造→种植→收获→保存/继续游戏 | PC 与手机实际通关闭环，刷新恢复状态，静态托管可运行 |
-| G5 V1.0 内容补齐 | 根据 D08 实现基础 NPC、动物、资源再生及经济 | 不破坏旧存档与现有性能目标 |
-| G6 发布 | D22、D23，全面回归、许可审计 | 真实发布验收及可回滚 |
-
-第一版内容数量、世界坐标上限、Chunk 尺寸、模拟频率、目标硬件及性能指标在对应专项文档确定。无限指按需生成的实际可探索范围，不承诺数学意义无界。离屏农田可按游戏时间结算，浏览器关闭期间不默认推进游戏时间；具体规则由 D06 评审确定。
-
-## 4. 设计文档质量要求
-
-- 每份文档写明状态、适用版本、目标、非目标、术语、依赖、设计规则、异常与边界、验收、待决问题、参考依据；简单文档可裁剪。
-- 用户明确的要求优先；新决策必须注明提议、已确认或待验证状态。架构变更用 ADR 记录，不直接覆盖历史理由。
-- 需求、功能、测试采用稳定 ID 关联；实施任务必须说明依赖、交付物、测试和完成条件。
-- 视觉验收必须使用真实浏览器截图，固定 Seed、游戏时刻、相机和设备像素比例，并进行人工审美检查；截图对比不替代可玩性测试。
-- 文档和代码同步更新。不得将计划、假数据、未执行测试标为通过。不为未来尚无实际需求的模块预建大量抽象层。
-
-## 5. 参考依据（本次已查阅公开文档）
-
-| 来源 | 借鉴方式 |
-|---|---|
-| [Cataclysm-DDA 开发过程](https://github.com/CleverRaven/Cataclysm-DDA/blob/master/doc/development_process.md) / [Gameplay](https://github.com/CleverRaven/Cataclysm-DDA/blob/master/doc/design-balance-lore/design-gameplay.md) / [UX](https://github.com/CleverRaven/Cataclysm-DDA/blob/master/doc/design-balance-lore/design-user-experience.md) | 分离设计目标、玩法与体验，不照搬生存游戏规则 |
-| [Farmhand GDD](https://github.com/jeremyckahn/farmhand/blob/develop/GAME_DESIGN_DOCUMENT.md) | 浏览器农业经营、状态、离线存储设计 |
-| [Luanti Mapgen](https://docs.luanti.org/for-creators/mapgen/) | 玩家周边按需生成；3D 引擎不是本项目依赖 |
-| [Red Blob Games](https://www.redblobgames.com/) / [Mapgen4](https://www.redblobgames.com/maps/mapgen4/) | 地形、水系与寻路算法；有限域地图算法不能直接等同无限区块生成 |
-| [Wesnoth Create Art](https://wiki.wesnoth.org/Create_Art) | 素材和动画一致性规范；不采用其六角格视角 |
-| [Phaser Tilemap](https://docs.phaser.io/api-documentation/class/tilemaps-tilemap) | 游戏引擎候选、瓦片地图 API |
-| [MADR](https://adr.github.io/madr/) | 轻量 Markdown 架构决策记录 |
-| [Diátaxis](https://diataxis.fr/) | 区分解释、操作和参考文档 |
-| [Playwright Visual comparisons](https://playwright.dev/docs/test-snapshots) | 可重复的视觉回归测试 |
-
-参考资料为公开文档级调研，未完成候选游戏源码审计、版本固定和运行基准测试；D18 后续逐项补齐。前期视觉图片仅为风格参考，不能当作已授权游戏资产。
-
-## 6. 当前状态（以 ROADMAP 的实际证据为准）
-
-- [x] 建立文档清单、依赖关系、设计顺序与验收门槛。
-- [x] G0 项目定义文档成稿（19项用户确认）。
-- [x] G1 游戏及美术文字设计成稿（实际样片尚未评审）。
-- [x] G2 技术设计成稿（未完成技术原型验证）。
-- [ ] G1/G2 实际样片及原型验收。
-- [ ] 开展 G3 技术原型验证。
-- [ ] 实施首个可玩版本。
-
-正式设计文档按依赖顺序编写；设计成稿不等于原型或发布验收通过。
-
-
+| D01 | docs/design/PRODUCT_VISION.md | G0 |
+| D02 | docs/design/GAME_DESIGN.md | G1 |
+| D03 | DESIGN.md | G1 |
+| D04 | docs/design/UX_AND_CONTROLS.md | G1 |
+| D05 | docs/design/WORLD_GENERATION.md | G1 |
+| D06 | docs/design/GAMEPLAY_SYSTEMS.md | G1 |
+| D07 | docs/design/CONTENT_AND_BALANCE.md | G1 |
+| D08 | docs/design/NPC_AND_ECOLOGY.md | G1 |
+| D09 | docs/art/ASSET_PIPELINE.md | G1 |
+| D10 | docs/engineering/ARCHITECTURE.md | G2 |
+| D11 | docs/engineering/DATA_AND_SAVE.md | G2 |
+| D12 | docs/engineering/PERFORMANCE.md | G2 |
+| D13 | docs/engineering/TEST_AND_ACCEPTANCE.md | G2 |
+| D14 | docs/engineering/DEPLOYMENT.md | G2 |
+| D15 | AGENTS.md | G2 |
+| D16 | docs/engineering/DEVELOPMENT_GUIDE.md | G2 |
+| D17 | docs/ROADMAP.md | G0/G2 |
+| D18 | docs/REFERENCES.md | G0 |
+| D19 | docs/decisions/README.md | G0 |
+| D20 | README.md | G0 |
+| D21 | THIRD_PARTY_NOTICES.md | G2 |
+| D22 | CHANGELOG.md | G6 |
+| D23 | docs/PLAYER_GUIDE.md | G6 |
+| D24 | docs/design/PLAYER_IDENTITY.md | G1 |
+| D25 | docs/design/MULTIPLAYER_WORLD.md | G1 |
+| D26 | docs/design/AGENT_GAMEPLAY.md | G1 |
+| D27 | docs/engineering/AGENT_API.md | G2 |
+| D28 | docs/engineering/WORLD_ADMINISTRATION.md | G2 |
+D01–21、D24–28为正式设计基线（26份）；D22–23基于真实发布实现编写。D24/25/26依赖D01/02，D27依赖D24–26/D10，D28依赖D10/11/24/25。按D17任务依赖实施。D03/D09实际样片用户验收、G3技术验证、G6真机/负载/恢复/授权验收均未完成。
+## 质量规则
+用户确认优先；新增数值/配额/时钟/领地规则均为设计初值，实测修订走ADR。G3必须验证多人同步、游客转换、并发冲突、权限、AI控制权、持久化和真实画面，不能先堆完整内容。所有任务与测试稳定编号，运行证据为完成依据。禁止复制未授权参考图片；文件名英文、正文中文；保留现有MIT LICENSE。原始图未归档，只有两组主风格锚点，建筑不得使用此前独立参考。

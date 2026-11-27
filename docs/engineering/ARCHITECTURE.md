@@ -1,39 +1,16 @@
-# 技术架构 TDD · D10
-v1.0 · 2026-11-27 · 设计基线，未完成原型
-依赖 D02、D04–D06、D08。目标为单一引擎、客户端本地、可维护可测试。不做通用游戏引擎。
-
-## 技术栈
-Phaser 4（WebGL）、TypeScript strict、Vite、HTML/CSS DOM UI、IndexedDB、Worker、Web Audio、PWA、Vitest、Playwright、GitHub Actions、Nginx HTTPS。Phaser 4 为用户已确认，具体4.x及Node/Vite版本在G3通过官方版本兼容检查后锁定 package-lock.json，不擅自回退3.x。无React/Vue、WASM、ECS、额外物理引擎、服务器数据库、运行时LLM。WebGL不可用显示明确提示，不维护第二渲染实现。
-
-## 模块与所有权
-```
-src/
-  app/            bootstrap、世界会话、页面生命周期
-  ui/             DOM、控制映射、i18n
-  render/         Phaser scenes、camera、tilemap、sprite、audio
-  simulation/     GameState、clock、commands、rules、collision
-  world/          coordinates、generation、chunk manager、settlement
-  worker/         地图生成消息入口
-  content/        JSON definitions 与一次性 schema 校验
-  persistence/    IndexedDB、save coordinator、migration、import/export
-  shared/         必需的 ID、value types、纯函数
-tests/{unit,integration,e2e,fixtures}/
-```
-箭头：app→ui/render/simulation/world/persistence；ui/render→命令端口+只读视图；simulation→world contracts/content；world→纯生成器/worker adapter；persistence→序列化契约。simulation 不 import Phaser、DOM、IndexedDB；worker 不 import UI，不持有世界可变状态。除启动组合层外禁止循环依赖。GameSession 主线程唯一权威状态；render 只映射 snapshot/delta；UI输入不直接修改模型。内容只读、源数据ID引用，禁止用显示文本当键。
-
-## 时钟、调度与命令
-requestAnimationFrame渲染30–60fps；移动/碰撞固定60Hz，累计真实 active delta（上限100ms/帧，最多6步，严重阻塞时显式暂停而非无限追赶），记录掉帧。每60个实际模拟 tick 增加1 gameMinute；模拟不足时不得补过量时间。严格整数累计，暂停、隐藏、系统弹窗时清空累积和输入；睡眠显式 AdvanceTo 次日06:00，按事件顺序结算，不靠模拟数百万帧。低频NPC 2–5Hz、环境1Hz或事件、农业按日期。离屏补算与在线共用同一规则，不维护两份农业逻辑。
-
-命令类型示例：MoveIntent(dx,dy), UseTool(tile,toolId), Interact(targetId), TransferItem(from,to,qty), Craft(recipeId,qty), PlaceBuilding(id,tile,rotation), RemoveBuilding(instanceId), Sleep, Travel(homeId), Buy/Sell。每个持久操作含 commandId/sequence，session 串行执行；先检查所有条件和资源预算，成功后一次提交状态 diff，返回事件（inventoryChanged, tileChanged, timeAdvanced, actionRejected等），失败无副作用。事件用于 UI/音效/dirty tracking，不搞全局事件总线或复杂CQRS。移动输入按帧合并，不持久化每次按键。逻辑碰撞 AABB+格子查询，分轴移动，禁止走入未知区块；不使用 Phaser Arcade 作为权威物理。固定步进数据与纯规则可在 Node 测试。
-
-## 世界与 Worker 协议
-GenerationRequest {sessionId,epoch,requestId,seed,generatorVersion,cx,cy}；GenerationResult 同标签+ typed arrays、staticEntities、error?。主线程丢弃过期 epoch/已卸载请求，传送/换世界时递增epoch；用 Transferable 移交数组，禁止共享可变状态。初始单 Worker，最多待处理16、优先距离/移动方向；超预算取消或延后。Chunk states absent/requested/baseReady/settling/active/cached/evicting/error；加载 base 后查询 delta，完成结算才激活碰撞与 view；dirty 持久化确认后才可卸载；卸载渲染对象不等于删除世界修改。Region LRU，仅可重算数据。传送加载目标、安全检查、原子切换位置，失败保留原会话。
-
-## 渲染
-单主场景（地表）、独立室内场景实例、启动/加载/菜单用 DOM；场景退出释放 listener、timer、sprite、tilemap。Chunk TilemapLayer 用统一 atlas、视锥裁剪；世界到局部坐标基于当前 origin chunk，rebase 同一帧更新 camera、sprite、输入转换。静态地层与动态对象分离，按脚底Y排序+稳定ID；遮挡拆分。相机平滑跟随但像素位置取整，固定缩放档。HUD 读快照/事件更新而非每帧重建DOM；音频随状态暂停。日夜色调和粒子预算见D12。室内不创建地表第二游戏引擎，切换时保持全局时钟与存档归属。
-
-## 会话与故障
-新建/读档→验证版本与内容→生成出生或目标→加载修改→进入playing。退出先暂停与持久化，事务失败给重试/导出，不误报已保存。单世界单写者（D11），不同 worldId 隔离。浏览器 contextlost 暂停并释放输入，恢复重建渲染，不改变游戏规则；必要时提示保存重载。Worker失败限次重试并显示原因，禁止静默吞异常。日志默认本地、无遥测、无个人数据上传。
-
-## 验收
-ARCH01 无图形纯规则测试；ARCH02 worker逆序/过期请求不污染会话；ARCH03 暂停/hidden/lag/睡眠时钟；ARCH04 context loss/室内切换/退出资源清理；ARCH05 静态 HTTPS 断网后无运行时网络依赖。依赖选择/原型证据记录 ADR；性能未实测。
+# 权威共享世界技术架构 D10
+v2.0 · 2026-11-27 · 替代单机架构；参数及版本待G3验证
+## 技术路线
+Phaser4+TypeScript strict+Vite（已确认）；服务端选Node.js LTS+Colyseus，使用其支持的同源HTTP路由与WSS，SQLite本地SSD/WAL单写者。具体版本与路由、驱动兼容性在G3实测锁定。Nginx HTTPS，IndexedDB仅缓存公开底图/设置，不是权威存档。PWA仅静态资源缓存；正式玩法必须联网。无Redis、第二游戏引擎、分片、多正式世界、服务端GPU或LLM。初期单进程单世界。
+## 模块
+src/client（Phaser/DOM/预测/Worker）、src/server（唯一WorldRoom/auth/session/admin/persistence）、src/simulation（纯TS权威规则/碰撞/时钟/命令）、src/world（纯确定性生成器）、src/protocol（schema/错误码）、src/content、src/agent（SDK、本地MCP）、tests、skills/infinite-valley。客户端/UI/AI→协议→服务端dispatcher→规则→事务→事件，客户端不能提交最终状态。simulation不依赖Phaser/DOM/SQLite/Colyseus；生成器可共用，不为每人建实例。
+## 唯一世界
+数据库唯一active worldId+worldEpoch，管理员CLI显式创建，Seed及生成器版本固定。服务启动只加载既有世界，空库拒绝普通加入；关闭autoDispose，禁止客户端joinOrCreate、满员新建room或自动重建；进程锁防双写。所有人类AI共享全球整数坐标。底图F(seed,version,x,y)+权威共享delta；同一个坐标只存在一份实际状态。房屋内部只是同世界空间实例。正式世界与隔离测试数据库不可混用。D28管理生命周期。
+## 调度与命令
+服务器20Hz固定步进初值，权威脚底碰撞/4tile/s移动速度；客户端30/60FPS预测插值。移动意图20Hz、300ms失效归零；失焦/断线/夺回控制权取消未提交动作。全局时钟1现实秒=1游戏分钟，有有效在线角色才推进，无人/维护/停机暂停；严重阻塞暂停维护不跳过日界。NPC2–5Hz、农业日界结算、纯装饰客户端执行。
+CommandEnvelope {protocolVersion,worldEpoch,sessionId,controllerEpoch,commandId,seq,kind,args,expectedRevision?}；身份来自连接，不信任payload玩家ID。持久命令串行预检、原子事务、提交后ACK，幂等receipt；旧epoch/重复冲突/权限/速率不合法拒绝。移动不逐帧落盘；经济/建造/采集/ACL/交易/日界立即持久。服务器接收顺序解决资源竞争。客户端预测不得改库存。
+## 空间兴趣管理 AOI
+每角色基础3×3活跃/5×5加载、视口上限49；服务器计算所有玩家范围并集及引用计数，重叠模拟一次，远区卸载；注册者离线资产按全局时间惰性结算，不遍历无限地图。Colyseus Schema仅全局小元数据，附近实体/地块通过显式定向snapshot/delta/event，私有库存/箱子/权限只发授权客户端，不广播全世界。chunkRevision缺口请求对应chunk全量；worldEpoch旧包丢弃。客户端Worker可重建公开base、路径规划、装饰，不能创造资源；服务器权威生成器验证占地/资源。服务器Region LRU、未提交dirty不得驱逐。局部坐标rebase避免GPU精度问题。出生公共区不可圈占；所有玩家在同坐标相遇。公开seed可被外部分析，不承诺地貌保密，正式观察API不主动暴露未探索资源。
+## 网络与控制
+HTTP认证、游客、恢复、导出；同源cookie/CSRF/Origin，短时一次性WS连接凭证。AI经相同协议，SDK和本地MCP stdio，不依赖注入浏览器，不在站点运行模型。唯一controllerEpoch、显式授权、可撤销，人类夺回先撤销AI旧队列；已提交操作不回滚。D24/D27详细约束。所有请求schema/大小/频率验证。SQLite故障停止持久写，不谎报保存；重连取最新状态，客户端缓存不回滚世界。
+验收ARCH01纯规则、ARCH02唯一世界/epoch、ARCH03权威时钟/并发、ARCH04AOI隐私、ARCH05图形/模型客户端、ARCH06人类AI同规则、ARCH07持久故障恢复。

@@ -1,17 +1,7 @@
 # Infinite Valley · 无限山谷
-
-温馨自然的 2D 像素田园开放世界。探索自然，选择家园，采集、种植、制作、建造、养殖与经营。以浏览器本地运行、无后端游戏计算为目标。
-
-**状态：正式设计阶段；尚无可运行游戏。** 当前不提供虚构的安装命令或 Demo。
-
-## 设计入口
-- [文档规划](DOCUMENTATION_PLAN.md)
-- [产品愿景与用户确认](docs/design/PRODUCT_VISION.md)
-- [总体设计 GDD](docs/design/GAME_DESIGN.md)
-- [视觉规范](DESIGN.md)
-- [技术架构](docs/engineering/ARCHITECTURE.md)
-- [开发路线图与验收门槛](docs/ROADMAP.md)
-- [Agent 规范](AGENTS.md)
-- [参考研究](docs/REFERENCES.md)
-
-V1.0 支持 PC 和手机横屏、简体中文和英文；不做地下世界、战斗、联机、账号或运行时 AI。Phaser 4 + TypeScript + Vite 为已确认技术路线。项目代码与文档采用仓库现有 [MIT LICENSE](LICENSE)，第三方素材各自遵循原授权，见 [第三方资源清单](THIRD_PARTY_NOTICES.md)。
+温馨自然的2D像素田园共享开放世界。所有人类与AI角色进入同一世界，自由探索、经营、建造与合作；只有管理员可创建或销毁世界。游客无需注册，退出销毁，可注册保留进度；注册玩家跨设备恢复。Phaser4+TypeScript+Vite，轻量权威服务端、无GPU及模型推理。
+**当前状态：V2.0共享世界设计阶段，尚无可运行游戏。**
+- [文档清单](DOCUMENTATION_PLAN.md) · [路线图](docs/ROADMAP.md) · [产品愿景](docs/design/PRODUCT_VISION.md) · [美术规范](DESIGN.md)
+- [多人世界](docs/design/MULTIPLAYER_WORLD.md) · [身份](docs/design/PLAYER_IDENTITY.md) · [AI玩法](docs/design/AGENT_GAMEPLAY.md)
+- [技术架构](docs/engineering/ARCHITECTURE.md) · [Agent API](docs/engineering/AGENT_API.md) · [世界管理](docs/engineering/WORLD_ADMINISTRATION.md) · [Agent开发规范](AGENTS.md)
+V1.0游戏范围仍无地下、战斗、死亡；共享在线与AI接入替代旧单机路线。MIT [LICENSE](LICENSE)，第三方资源独立登记 [NOTICE](THIRD_PARTY_NOTICES.md)。
