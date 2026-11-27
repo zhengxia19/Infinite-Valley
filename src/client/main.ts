@@ -119,4 +119,6 @@ class Explore extends Phaser.Scene{
     hud.textContent="开放世界技术预览（非正式世界）\n坐标 "+Math.floor(this.px)+", "+Math.floor(this.py)+"  ·  区块 "+cache.chunks.size+"/25\nWASD / 方向键 / 触屏";
   }
 }
-new Phaser.Game({type:Phaser.AUTO,parent:"game",width:960,height:640,backgroundColor:"#38563a",pixelArt:true,scale:{mode:Phaser.Scale.FIT,autoCenter:Phaser.Scale.CENTER_BOTH},scene:[Explore]});
+if(new URLSearchParams(location.search).get("review")==="1"){
+  import("./asset-review.ts").then(m=>m.startAssetReview(held)).catch(e=>{hud.textContent="素材验收预览启动失败："+String(e)});
+}else new Phaser.Game({type:Phaser.AUTO,parent:"game",width:960,height:640,backgroundColor:"#38563a",pixelArt:true,scale:{mode:Phaser.Scale.FIT,autoCenter:Phaser.Scale.CENTER_BOTH},scene:[Explore]});
