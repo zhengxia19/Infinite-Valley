@@ -10,7 +10,10 @@
     "dev": "vite --host 127.0.0.1",
     "typecheck": "tsc --noEmit",
     "build": "npm run typecheck && vite build",
-    "test": "node --experimental-strip-types --test tests/world.test.ts"
+    "test": "node --experimental-strip-types --test tests/world.test.ts tests/asset-review.test.mjs",
+    "assets:review": "node tools/art/approved_components_v1/build.mjs",
+    "predev": "npm run assets:review",
+    "prebuild": "npm run assets:review"
   },
   "dependencies": {
     "phaser": "4.2.1"
