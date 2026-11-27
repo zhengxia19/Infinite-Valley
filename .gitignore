@@ -10,3 +10,6 @@ logs/
 coverage/
 playwright-report/
 test-results/
+
+# Generated from the immutable, committed approval archive.
+/public/asset-review/
