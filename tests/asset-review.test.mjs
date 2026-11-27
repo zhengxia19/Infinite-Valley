@@ -15,3 +15,21 @@ test("registered foreground and hidden base reconstruct the approved silhouette"
 test("pixel-identical partition boundaries on real textures across scenes and negative coordinates",()=>{let checked=0;for(const scene of ["village","nature"]){const l=makeLayout(scene);for(const [x,y] of [[704,128],[-64,-64],[960,960]]){const full=renderTerrain(l.at,tex,x,y,128,128,2701,l.waterField);for(let j=0;j<2;j++)for(let i=0;i<2;i++){const part=renderTerrain(l.at,tex,x+i*64,y+j*64,64,64,2701,l.waterField);for(let k=0;k<64;k++){assert.deepEqual(part.rgba.subarray(k*256,(k+1)*256),full.rgba.subarray(((j*64+k)*128+i*64)*4,((j*64+k)*128+i*64+64)*4));checked+=64}}}}assert.equal(checked,98304)});
 test("bridge crossing, rails, water, gate and movement substeps",()=>{for(const scene of ["village","nature"]){const l=makeLayout(scene);assert(!l.blocked(l.spawn.x,l.spawn.y));for(const b of l.bridges){for(let x=b.x+8;x<=b.x+b.w-8;x+=4)assert(!l.blocked(x,b.y),scene+b.kind);assert(l.blocked(b.x+64,b.y+32));const p=move(l,b.x+8,b.y,b.w-16,0);assert(Math.abs(p.x-(b.x+b.w-8))<.01)}assert(l.blocked(768,275));const p=move(l,600,275,400,0);assert(p.x<768);if(scene==="village"){assert(l.blocked(520,790,false));assert(!l.blocked(520,790,true))}}});
 test("terrain chunk raster timing (diagnostic, not browser FPS)",()=>{const l=makeLayout();let t=performance.now();let result=renderTerrain(l.at,tex,512,256,256,256,2701,l.waterField);assert.equal(result.rgba.length,256*256*4);console.log("256x256 raster ms:",Math.round(performance.now()-t))});
+
+test("building access routes, mill bank and dry bridge portals",()=>{
+ const l=makeLayout("village");
+ const buildings=l.items.filter(o=>o.type==="building");assert.equal(buildings.length,5);
+ for(const b of buildings){
+  assert.deepEqual(b.access[0],[b.doorX,b.y+8]);
+  for(let i=1;i<b.access.length;i++){
+   const [x,y]=b.access[i-1],[ex,ey]=b.access[i],n=Math.ceil(Math.hypot(ex-x,ey-y)/4);
+   for(let j=0;j<=n;j++){const xx=x+(ex-x)*j/n,yy=y+(ey-y)*j/n;assert(!l.blocked(xx,yy),b.id+" access blocked");assert.equal(l.at(Math.floor(xx/32),Math.floor(yy/32)),"stone",b.id+" access texture")}
+   const p=move(l,x,y,ex-x,ey-y);assert(Math.hypot(p.x-ex,p.y-ey)<.01,b.id+" access unreachable");
+  }
+  assert.equal(b.access.at(-1)[1],b.roadY);
+ }
+ const mill=buildings.find(b=>b.id==="mill");
+ assert(l.waterField(mill.wheelX,mill.wheelY)<=0,"wheel should contact river");
+ assert(l.waterField(mill.x+40,mill.y-25)>=0,"building collision footprint must stay on dry land");
+ for(const scene of ["village","nature"]){const a=makeLayout(scene);for(const b of a.bridges)for(let y=b.y-24;y<=b.y+24;y+=4)for(const x of [b.x+8,b.x+b.w-8])assert(a.waterField(x,y)>=0,b.kind+" wet portal")}
+});
