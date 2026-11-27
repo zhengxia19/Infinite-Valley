@@ -12,3 +12,12 @@ jobs:
       # 初次联网安装需生成并提交lockfile，此处尚不使用npm ci。
       - run: npm install --no-audit --no-fund
       - run: npm run build
+      - run: npm install --no-save --no-audit --no-fund playwright@1.56.1
+      - run: npx playwright install --with-deps chromium
+      - run: node tools/art/approved_components_v1/browser-test.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: asset-review-browser-results
+          path: test-results/asset-review/
+          if-no-files-found: ignore
