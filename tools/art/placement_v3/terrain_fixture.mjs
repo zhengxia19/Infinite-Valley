@@ -1,0 +1,1 @@
+export const fixture=(x,y)=>{let r=5+Math.round(1.6*Math.sin(x/2.5)+.9*Math.cos(x/4.8));if(y===r||y===r+1||((x>12&&x<18)&&y===r+2))return 0;if(y===r-1&&x%5!==0)return 1;if(y===r+2&&x%5!==0)return 5;if(x===5||x===14||y===2||y===10)return 6;if(x<5&&y<6)return 3;if(x>13&&y<6)return 4;if(x<7&&y>8)return 4;if(x>10&&y>7)return 3;return 2};

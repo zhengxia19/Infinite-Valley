@@ -17,8 +17,8 @@ const BAND=8;
 const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
 const smooth=(a,b,v)=>{let t=clamp((v-a)/(b-a));return t*t*(3-2*t)};
 const mod=(v,n)=>((v%n)+n)%n;
-function axis(p){let a=Math.floor(p/TILE),r=p-a*TILE;if(r<BAND)return [a-1,a,smooth(-BAND,BAND,r)];if(r>TILE-BAND)return [a,a+1,smooth(-BAND,BAND,r-TILE)];return [a,a,0]}
-export function weightsAt(at,x,y){let [a,b,tx]=axis(x),[c,d,ty]=axis(y),w=new Float64Array(7);for(const [cx,cy,k] of [[a,c,(1-tx)*(1-ty)],[b,c,tx*(1-ty)],[a,d,(1-tx)*ty],[b,d,tx*ty]]){if(k){let id=at(cx,cy);if(!Number.isInteger(id)||id<0||id>=7)throw Error("unknown material "+id);w[id]+=k}}return w}
+function axis(p,band=BAND){let a=Math.floor(p/TILE),r=p-a*TILE;if(r<band)return [a-1,a,smooth(-band,band,r)];if(r>TILE-band)return [a,a+1,smooth(-band,band,r-TILE)];return [a,a,0]}
+export function weightsAt(at,x,y,band=BAND){let [a,b,tx]=axis(x,band),[c,d,ty]=axis(y,band),w=new Float64Array(7);for(const [cx,cy,k] of [[a,c,(1-tx)*(1-ty)],[b,c,tx*(1-ty)],[a,d,(1-tx)*ty],[b,d,tx*ty]]){if(k){let id=at(cx,cy);if(!Number.isInteger(id)||id<0||id>=7)throw Error("unknown material "+id);w[id]+=k}}return w}
 // Mirror repeats share edge samples exactly, including negative world coordinates.
 function mirror(x,n){let m=mod(x,2*n);return m<n?m:2*n-1-m}
 function texel(im,x,y){return (mirror(y,im.h)*im.w+mirror(x,im.w))*4}
@@ -32,9 +32,9 @@ export function renderRegion(at,textures,x0,y0,w,h,seed=0){
  let minX=Math.floor(x0/TILE)-2,minY=Math.floor(y0/TILE)-2,maxX=Math.floor((x0+w-1)/TILE)+2,maxY=Math.floor((y0+h-1)/TILE)+2,cols=maxX-minX+1,rows=maxY-minY+1,halo=new Uint8Array(cols*rows);
  for(let y=minY;y<=maxY;y++)for(let x=minX;x<=maxX;x++){let id=at(x,y);if(!Number.isInteger(id)||id<0||id>=7)throw Error("unknown material "+id);halo[(y-minY)*cols+x-minX]=id}
  const read=(x,y)=>halo[(y-minY)*cols+x-minX],rgba=new Uint8Array(w*h*4);
- for(let iy=0;iy<h;iy++)for(let ix=0;ix<w;ix++){let x=x0+ix,y=y0+iy,px=x+.5,py=y+.5,ws=weightsAt(read,px,py),ww=ws[0],land=1-ww;
+ for(let iy=0;iy<h;iy++)for(let ix=0;ix<w;ix++){let x=x0+ix,y=y0+iy,px=x+.5,py=y+.5,ws=weightsAt(read,px,py),ww=weightsAt(read,px,py,TILE/2)[0],land=1-ws[0];
  let jitter=noise(px,py,seed)*.07;let water=smooth(.42+jitter,.58+jitter,ww);
- let bank=(1-water)*smooth(.02,.36,ww)*.72;
+ let bank=(1-water)*smooth(.03,.40,ww)*.56;
  let deep=water>0?deepFactor(read,px,py):0;
  let i=(iy*w+ix)*4,landRGB=[0,0,0];
  for(let m=1;m<7;m++){if(!ws[m])continue;let im=textures[NAMES[m]],p=texel(im,x,y);for(let c=0;c<3;c++)landRGB[c]+=im.rgba[p+c]*ws[m]/land}

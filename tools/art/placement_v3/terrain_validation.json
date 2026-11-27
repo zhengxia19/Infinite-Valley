@@ -1,0 +1,85 @@
+{
+  "junctions": 2401,
+  "binaryNeighborhoodRasters": 512,
+  "seamCases": 36,
+  "comparedPixels": 147456,
+  "roadWaterPreserved": true,
+  "textureSources": {
+    "water": {
+      "path": "assets/source/environment/water_v3/water_deep.png",
+      "sha": "7436d605cfd8b8541b936ad25987a06259a711de",
+      "canvas": [
+        64,
+        64
+      ]
+    },
+    "shallow": {
+      "path": "assets/source/environment/water_v3/water_shallow.png",
+      "sha": "654595f9a4bb833ce371f90ce732cfb87859f762",
+      "canvas": [
+        64,
+        64
+      ]
+    },
+    "sand": {
+      "path": "assets/candidates/environment_v1/sprites/sand_01.png",
+      "sha": "131ead06d1bab9ba1d78cb7a29aa24b19f504fb0",
+      "canvas": [
+        32,
+        32
+      ]
+    },
+    "grass": {
+      "path": "assets/source/environment/environment_v4/grass_patch_01.png",
+      "sha": "201a20078ce815c30800cab243a846838d73879c",
+      "canvas": [
+        96,
+        96
+      ]
+    },
+    "forest": {
+      "path": "assets/source/environment/environment_v4/grass_patch_04.png",
+      "sha": "9298cccf88024429288378dde5606762b0b6cd40",
+      "canvas": [
+        96,
+        96
+      ]
+    },
+    "hill": {
+      "path": "assets/source/environment/environment_v4/grass_patch_06.png",
+      "sha": "af0c3c7a1b403669a2804c9adaa0bc51466f15f2",
+      "canvas": [
+        96,
+        96
+      ]
+    },
+    "wetland": {
+      "path": "assets/candidates/environment_v1/sprites/wetland_01.png",
+      "sha": "74d8fcfa21b9499d6f63efee47f12c9e212d5ec3",
+      "canvas": [
+        32,
+        32
+      ]
+    },
+    "road": {
+      "path": "assets/candidates/environment_v1/sprites/dirt_01.png",
+      "sha": "4a99295f8f3e4577317d4898809c7cd3b4421fdb",
+      "canvas": [
+        32,
+        32
+      ]
+    }
+  },
+  "preview": {
+    "width": 640,
+    "height": 384,
+    "sha": "b684e4a7eefbab958c66f270fb4ff7b49748050d",
+    "seed": 2701
+  },
+  "runtime": "same committed JS functions executed in isolated JS runtime; node CLI and Phaser not executed",
+  "limitations": [
+    "地表 Hill/湿地/道路暂用既有纹理映射",
+    "视觉岸线不是碰撞边界",
+    "未做正式引擎性能与场景验收"
+  ]
+}
