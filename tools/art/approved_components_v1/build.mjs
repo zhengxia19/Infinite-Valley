@@ -21,7 +21,8 @@ const registrations={};for(const id of ["cottage","shop","mill","market","tower"
 const waterPath=join(root,"assets/source/environment/water_v3/water_deep.png");
 const shallowPath=join(root,"assets/source/environment/water_v3/water_shallow.png");
 const water=decodePNG(await readFile(waterPath)),shallow=decodePNG(await readFile(shallowPath));
-const textures={};for(const name of MATERIALS)textures[name]=name==="water"?[water,shallow]:Object.keys(ims).filter(id=>new RegExp("^"+name+"[0-9]$").test(id)).map(id=>ims[id]);
+const textures={};for(const name of MATERIALS)textures[name]=name==="water"?[water]:Object.keys(ims).filter(id=>new RegExp("^"+name+"[0-9]$").test(id)).map(id=>ims[id]);
+textures.shallow=[shallow];
 const layouts={};for(const scene of ["village","nature"]){const l=makeLayout(scene);const chunks=[];for(let y=0;y<l.height;y+=256)for(let x=0;x<l.width;x+=256){const w=Math.min(256,l.width-x),h=Math.min(256,l.height-y),id=scene+"_"+x+"_"+y,im=renderTerrain(l.at,textures,x,y,w,h,2701,l.waterField);const bytes=png(im);await writeFile(join(dir,"terrain",id+".png"),bytes);chunks.push({id,x,y,w,h,sha256:sha(bytes)})}layouts[scene]={width:l.width,height:l.height,items:l.items,bridges:l.bridges,spawn:l.spawn,chunks}}
 await copyFile(join(root,"assets/source/characters/character_v2/male/default.png"),join(dir,"actor.png"));
 const manifest={sourceSHA256:sha(html),sourceCount:Object.keys(source).length,records,registrations,removedPixels:Object.values(removed).reduce((a,b)=>a+b,0),layouts,seed:2701,limitations:["隐藏面为独立原稿近似配准，未完成人工精修","当前为固定验收场景，不是共享世界"]};
