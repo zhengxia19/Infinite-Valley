@@ -1,0 +1,11 @@
+{
+  "repeat_seed": 2701,
+  "png_identical": true,
+  "report_identical": true,
+  "additional_seeds": [
+    2702,
+    2703
+  ],
+  "scene_sha256": "b3ca299863c1a8fa1c919008e71a9ef468de7ce070fe939319aa94ec55dbded2",
+  "notes": "additional seeds vary decoration only; fixed diagnostic geometry"
+}

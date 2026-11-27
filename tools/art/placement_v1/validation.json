@@ -1,0 +1,671 @@
+{
+  "seed": 2701,
+  "tile_px": 32,
+  "scene_size": [
+    1152,
+    768
+  ],
+  "bridge": {
+    "entrances": [
+      [
+        592,
+        336
+      ],
+      [
+        592,
+        388
+      ]
+    ],
+    "deck": [
+      [
+        578,
+        335
+      ],
+      [
+        606,
+        335
+      ],
+      [
+        606,
+        389
+      ],
+      [
+        578,
+        389
+      ]
+    ],
+    "supports": [
+      [
+        564,
+        333
+      ],
+      [
+        620,
+        333
+      ],
+      [
+        564,
+        391
+      ],
+      [
+        620,
+        391
+      ]
+    ],
+    "max_wet_run": 42,
+    "axis": "NS",
+    "id": "bridge_vertical",
+    "origin": [
+      544,
+      311
+    ]
+  },
+  "buildings": [
+    {
+      "id": "cottage",
+      "origin": [
+        736,
+        55
+      ],
+      "entry": [
+        84,
+        181
+      ],
+      "foot": [
+        [
+          12,
+          111
+        ],
+        [
+          181,
+          111
+        ],
+        [
+          181,
+          169
+        ],
+        [
+          118,
+          174
+        ],
+        [
+          118,
+          164
+        ],
+        [
+          60,
+          164
+        ],
+        [
+          60,
+          179
+        ],
+        [
+          12,
+          179
+        ]
+      ],
+      "entryWorld": [
+        820,
+        236
+      ],
+      "footWorld": [
+        [
+          748,
+          166
+        ],
+        [
+          917,
+          166
+        ],
+        [
+          917,
+          224
+        ],
+        [
+          854,
+          229
+        ],
+        [
+          854,
+          219
+        ],
+        [
+          796,
+          219
+        ],
+        [
+          796,
+          234
+        ],
+        [
+          748,
+          234
+        ]
+      ]
+    },
+    {
+      "id": "blue_roof_shop",
+      "origin": [
+        457,
+        80
+      ],
+      "entry": [
+        126,
+        147
+      ],
+      "foot": [
+        [
+          12,
+          100
+        ],
+        [
+          177,
+          100
+        ],
+        [
+          177,
+          139
+        ],
+        [
+          142,
+          139
+        ],
+        [
+          142,
+          138
+        ],
+        [
+          108,
+          138
+        ],
+        [
+          108,
+          150
+        ],
+        [
+          12,
+          150
+        ]
+      ],
+      "entryWorld": [
+        583,
+        227
+      ],
+      "footWorld": [
+        [
+          469,
+          180
+        ],
+        [
+          634,
+          180
+        ],
+        [
+          634,
+          219
+        ],
+        [
+          599,
+          219
+        ],
+        [
+          599,
+          218
+        ],
+        [
+          565,
+          218
+        ],
+        [
+          565,
+          230
+        ],
+        [
+          469,
+          230
+        ]
+      ]
+    },
+    {
+      "id": "watermill",
+      "origin": [
+        935,
+        155
+      ],
+      "entry": [
+        147,
+        133
+      ],
+      "foot": [
+        [
+          12,
+          87
+        ],
+        [
+          160,
+          87
+        ],
+        [
+          160,
+          123
+        ],
+        [
+          112,
+          123
+        ],
+        [
+          112,
+          130
+        ],
+        [
+          12,
+          130
+        ]
+      ],
+      "wheel": [
+        45,
+        141
+      ],
+      "entryWorld": [
+        1082,
+        288
+      ],
+      "footWorld": [
+        [
+          947,
+          242
+        ],
+        [
+          1095,
+          242
+        ],
+        [
+          1095,
+          278
+        ],
+        [
+          1047,
+          278
+        ],
+        [
+          1047,
+          285
+        ],
+        [
+          947,
+          285
+        ]
+      ],
+      "wheelWorld": [
+        980,
+        296
+      ]
+    },
+    {
+      "id": "market_stall",
+      "origin": [
+        670,
+        154
+      ],
+      "entry": [
+        48,
+        84
+      ],
+      "foot": [
+        [
+          10,
+          49
+        ],
+        [
+          86,
+          49
+        ],
+        [
+          86,
+          73
+        ],
+        [
+          10,
+          73
+        ]
+      ],
+      "entryWorld": [
+        718,
+        238
+      ],
+      "footWorld": [
+        [
+          680,
+          203
+        ],
+        [
+          756,
+          203
+        ],
+        [
+          756,
+          227
+        ],
+        [
+          680,
+          227
+        ]
+      ]
+    }
+  ],
+  "checks": {
+    "bridge_connection": "ok",
+    "logical_grid_crossing": true,
+    "non_bridge_water_blocked": true,
+    "buildings": {
+      "cottage": {
+        "dry_footprint": true,
+        "entry_on_road": true,
+        "entry_unblocked": true,
+        "entry_dry": true,
+        "connected_to_south": true
+      },
+      "blue_roof_shop": {
+        "dry_footprint": true,
+        "entry_on_road": true,
+        "entry_unblocked": true,
+        "entry_dry": true,
+        "connected_to_south": true
+      },
+      "watermill": {
+        "dry_footprint": true,
+        "entry_on_road": true,
+        "entry_unblocked": true,
+        "entry_dry": true,
+        "wheel_in_water": true,
+        "connected_to_south": true
+      },
+      "market_stall": {
+        "dry_footprint": true,
+        "entry_on_road": true,
+        "entry_unblocked": true,
+        "entry_dry": true,
+        "connected_to_south": true
+      }
+    },
+    "negative": {
+      "wet_entrance": "wet_entrance",
+      "road_gap": "road_gap",
+      "span_too_short": "span_too_short",
+      "unsupported_grid_orientation": "unsupported_grid_orientation"
+    }
+  },
+  "oblique_diagnostics": {
+    "stone_arch_bridge": {
+      "pixel_connection": true,
+      "reason": "ok",
+      "grid_eligible": false,
+      "geometry": {
+        "entrances": [
+          [
+            141,
+            164
+          ],
+          [
+            244,
+            140
+          ]
+        ],
+        "deck": [
+          [
+            134,
+            159
+          ],
+          [
+            164,
+            134
+          ],
+          [
+            195,
+            126
+          ],
+          [
+            224,
+            126
+          ],
+          [
+            250,
+            133
+          ],
+          [
+            249,
+            146
+          ],
+          [
+            224,
+            140
+          ],
+          [
+            198,
+            139
+          ],
+          [
+            172,
+            146
+          ],
+          [
+            144,
+            172
+          ]
+        ],
+        "supports": [
+          [
+            136,
+            174
+          ],
+          [
+            249,
+            164
+          ]
+        ],
+        "max_wet_run": 84,
+        "axis": "oblique",
+        "id": "stone_arch_bridge",
+        "origin": [
+          112,
+          89
+        ]
+      }
+    },
+    "rope_bridge": {
+      "pixel_connection": true,
+      "reason": "ok",
+      "grid_eligible": false,
+      "geometry": {
+        "entrances": [
+          [
+            144,
+            164
+          ],
+          [
+            245,
+            140
+          ]
+        ],
+        "deck": [
+          [
+            139,
+            156
+          ],
+          [
+            235,
+            133
+          ],
+          [
+            249,
+            136
+          ],
+          [
+            250,
+            146
+          ],
+          [
+            147,
+            173
+          ]
+        ],
+        "supports": [
+          [
+            143,
+            176
+          ],
+          [
+            242,
+            160
+          ]
+        ],
+        "max_wet_run": 80,
+        "axis": "oblique",
+        "id": "rope_bridge",
+        "origin": [
+          116,
+          95
+        ]
+      }
+    },
+    "garden_bridge": {
+      "pixel_connection": true,
+      "reason": "ok",
+      "grid_eligible": false,
+      "geometry": {
+        "entrances": [
+          [
+            145,
+            177
+          ],
+          [
+            237,
+            126
+          ]
+        ],
+        "deck": [
+          [
+            139,
+            172
+          ],
+          [
+            158,
+            145
+          ],
+          [
+            189,
+            118
+          ],
+          [
+            221,
+            110
+          ],
+          [
+            245,
+            120
+          ],
+          [
+            242,
+            130
+          ],
+          [
+            220,
+            124
+          ],
+          [
+            196,
+            129
+          ],
+          [
+            171,
+            155
+          ],
+          [
+            152,
+            186
+          ]
+        ],
+        "supports": [
+          [
+            143,
+            189
+          ],
+          [
+            240,
+            152
+          ]
+        ],
+        "max_wet_run": 68,
+        "axis": "oblique",
+        "id": "garden_bridge",
+        "origin": [
+          120,
+          77
+        ]
+      }
+    }
+  },
+  "object_count": 146,
+  "used_git_blob_sha": {
+    "assets/source/environment/environment_v4/grass_patch_01.png": "201a20078ce815c30800cab243a846838d73879c",
+    "assets/source/environment/environment_v4/grass_patch_02.png": "faa4a05693779a9d5692b8ab03ee376a07b46399",
+    "assets/source/environment/environment_v4/grass_patch_03.png": "99b522eb9200fb96d40516bd5946fcf31bd62ba9",
+    "assets/source/environment/environment_v4/grass_patch_04.png": "9298cccf88024429288378dde5606762b0b6cd40",
+    "assets/source/environment/environment_v4/grass_patch_05.png": "b24e3ec828448c42366897772757cbcec8436580",
+    "assets/source/environment/environment_v4/grass_patch_06.png": "af0c3c7a1b403669a2804c9adaa0bc51466f15f2",
+    "assets/source/environment/water_v3/water_shallow.png": "654595f9a4bb833ce371f90ce732cfb87859f762",
+    "assets/source/environment/water_v3/water_deep.png": "7436d605cfd8b8541b936ad25987a06259a711de",
+    "assets/source/environment/water_v3/water_clear.png": "d367453608e9852f5b66830c2bca30486169619c",
+    "assets/source/environment/water_v3/bank_north_green.png": "39c0d0b5cfb098aaa9e50bf631d87afb80f98f00",
+    "assets/source/environment/water_v3/bank_north_rock.png": "418374495e55d7ddf3dcb52e0c88ab1bf4d3c821",
+    "assets/source/environment/water_v3/bank_south_green.png": "d2f90ff711a7b09e960c466ae80b9a4df5864575",
+    "assets/source/environment/water_v3/bank_south_rock.png": "9e5e5766b6c5f79214c9bc1ffdb27ab79971ebc3",
+    "assets/candidates/environment_v1/sprites/dirt_01.png": "4a99295f8f3e4577317d4898809c7cd3b4421fdb",
+    "assets/candidates/environment_v1/sprites/pine_mature.png": "388cf5ab21575745f09b17be09bb4d04460297fb",
+    "assets/candidates/environment_v1/sprites/willow_mature.png": "e47d0213417dfaba59dc4d95b4b3947dd7bedb0b",
+    "assets/candidates/environment_v1/sprites/birch_mature.png": "23d526ca51eaca170e30d59dd7764337188a7d6d",
+    "assets/candidates/environment_v1/sprites/oak_mature.png": "f1c6b3cc9a844165432f903e8b7a017440f3ee57",
+    "assets/source/environment/environment_v4/rock_terrace.png": "4535a5d48158ba125135344df96f6d3223914730",
+    "assets/source/environment/environment_v4/giant_boulder.png": "0a68a6cb3f6e2087fb477cf0261d518cac8dfb34",
+    "assets/source/environment/environment_v4/giant_moss_cluster.png": "86879261665f4504c96056e640da5ab6279a1c94",
+    "assets/source/environment/environment_v4/rock_spires.png": "d0c28f3f8fb851e1d3c4968d7ec59da51a19e3e5",
+    "assets/source/environment/rocks_v3/boulder_moss.png": "087379923205f711021d557efed6fcf4ee14b9eb",
+    "assets/source/environment/environment_v4/fungus_amanita.png": "df4b2613f17bec78e3b984f5e35b67d027b21c2b",
+    "assets/candidates/environment_v1/sprites/grass_tuft.png": "dbf581ed93f5672c8b73d785a510ad23716da503",
+    "assets/candidates/environment_v1/sprites/shrub_green.png": "0208d9f7ed109b8dadbcc65d749cb48a19906fa7",
+    "assets/source/environment/environment_v4/fungus_violet.png": "cd05be0897518855d8c5b6760ea9e00f68eae7fd",
+    "assets/source/environment/environment_v4/fungus_white.png": "2dd04d8a3df441d128ee0213c83ffbed9ea4b101",
+    "assets/source/environment/environment_v4/fungus_chanterelle.png": "9629064621d50c92a920b099ba8feada947ea9bd",
+    "assets/candidates/environment_v1/sprites/fern.png": "cc056df9571908ef2f108bb576379b46257fe31c",
+    "assets/source/environment/environment_v4/fungus_shelf_log.png": "bb200981c2901e20998bad154c9f60561b26346e",
+    "assets/source/environment/rocks_v3/small_rock.png": "3c248706bccea3e9ce54eb29ce966d249d226188",
+    "assets/source/environment/environment_v4/fungus_bolete.png": "e4e963e92a4c938ed451396bd37f535bc307a79d",
+    "assets/source/environment/rocks_v3/pebbles.png": "cfd4f694b9b864204ca739489b5bd3f7030f649c",
+    "assets/candidates/environment_v1/sprites/flower_white.png": "11a4d4ab18c785ae5324f647466c03278a26e64f",
+    "assets/candidates/environment_v1/sprites/barrel.png": "a50bef1aac5fc31a1edc990790688e7f0ede805a",
+    "assets/candidates/environment_v1/sprites/lantern.png": "4ab0fda6e7fa929dac5b1127ad35a7703c570080",
+    "assets/candidates/environment_v1/sprites/signpost.png": "9cb0578e1f351f05e66ad23103b212608b988058",
+    "assets/candidates/environment_v1/sprites/fence_horizontal.png": "2632bac9e785fb270359a8aed9c8e9be9f3490a3",
+    "assets/source/environment/water_v3/lily_flower.png": "35389d7ab96669ddf7ad119c88d95c3c28dc252f",
+    "assets/source/environment/water_v3/lily.png": "c780af2f1d82ddcfb95c645d3c67602706606121",
+    "assets/candidates/environment_v1/sprites/bridge_vertical.png": "a234a86bf1ff87b191bc4c2ac8bd3cd824397423",
+    "assets/candidates/environment_v1/sprites/cottage.png": "713b2072192b5197e82568ac29186034686fb9c7",
+    "assets/source/environment/environment_v4/blue_roof_shop.png": "e52ed50a7c59b8e2d2f45e22da136645f18b79f6",
+    "assets/source/environment/environment_v4/watermill.png": "e2732cf16a066d2cb1f32034cf2089bd7cd2832d",
+    "assets/source/environment/environment_v4/market_stall.png": "f351fb28815602dd345b3ddd68cce242378e8d04",
+    "assets/source/characters/character_v2/male/default.png": "0f6334929df7a6ebf31c5c160260f5b2ce714675",
+    "assets/source/characters/character_v2/female/default.png": "80c044b99ec71bb51aa334c4b55f161f678143ff",
+    "assets/source/environment/environment_v4/stone_arch_bridge.png": "b4c984d7c3d7a1ebc12e69aeff683f34c274b8d1",
+    "assets/source/environment/environment_v4/rope_bridge.png": "4c539e76b197f56b86fbb0c22e366ad694fc31d0",
+    "assets/source/environment/environment_v4/garden_bridge.png": "bb42a6e12a0f3f9dbc2c8cf0b7c17fbd5dba54fd"
+  },
+  "limitations": [
+    "offline raster only",
+    "orthogonal main scene only",
+    "manual measured per-sprite anchors and fixed diagnostic layout, no arbitrary procedural settlement generator",
+    "single-image foreground ordering; no true roof/rail splits or full actor collision",
+    "shoreline strips visual approximation, not full mixed-material autotiling",
+    "no water animation, engine, network or cross-chunk runtime validation"
+  ]
+}
