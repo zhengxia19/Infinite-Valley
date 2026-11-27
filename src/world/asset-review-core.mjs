@@ -72,9 +72,18 @@ export function makeLayout(scene="village",seed=2701){
  const bridges=[["wood",160],["stone",384],["rope",640],["garden",864]].map(([kind,y])=>{const center=riverCenter(y);return {kind,x:Math.floor((center-half-64)/32)*32,y,w:Math.ceil((half*2+160)/32)*32,h:64}});
  // Bridge portals are dry over the whole 64px deck width; deck rectangle is the only water override.
  const items=[],add=(id,x,y,type,extra={})=>items.push({id,x,y,type,...extra});
- const roads=(x,y)=>bridges.some(b=>Math.abs(y-b.y)<32)||Math.abs(x-416)<24||Math.abs(x-1120)<24;
- const at=(tx,ty)=>{const x=tx*32+16,y=ty*32+16;if(waterField(x,y)<0)return "water";if(roads(x,y))return scene==="village"?"stone":"dirt";if(waterField(x,y)<25)return "sand";if(scene==="village"){if(x>160&&x<320&&y>250&&y<460)return "yard";if(x>1120&&x<1344&&y>550&&y<720)return "brick";if(y>770&&x<400)return "dirt";return "grass"}if(x<480&&y<510)return "forest";if(x>1070&&y<500)return "hill";if(x<440&&y>620)return "wetland";return "grass"};
- if(scene==="village"){for(const [id,x,y] of [["cottage",240,310],["shop",1120,325],["mill",1000,576],["market",370,570],["tower",1270,810]])add(id,x,y,"building");for(let i=0;i<5;i++)add("fence",200+i*64,790,"fence");add("gate_closed",520,790,"gate");for(let i=0;i<4;i++)add("wall",1100+i*64,925,"fence");for(const [i,id] of ["barrel","flowers","box","notice","lamp","sign","flowerbed","bench","wood_steps","stone_steps","gate_stone","fence2","wall2"].entries())add(id,160+(i%5)*94,460+Math.floor(i/5)*205,"prop")}
+ const millX=Math.floor(riverCenter(555)-half-48),millRoadX=bridges[2].x-32;
+ const buildings=scene==="village"?[
+  {id:"cottage",x:240,y:310,doorX:240,roadY:384},
+  {id:"shop",x:1120,y:325,doorX:1120,roadY:384},
+  {id:"mill",x:millX,y:576,doorX:millX-32,roadY:640,wheelX:millX+50,wheelY:555,roadX:millRoadX},
+  {id:"market",x:370,y:570,doorX:370,roadY:640},
+  {id:"tower",x:1270,y:810,doorX:1270,roadY:864}
+ ].map(b=>({...b,access:b.roadX===undefined?[[b.doorX,b.y+8],[b.doorX,b.roadY]]:[[b.doorX,b.y+8],[b.doorX,b.y+16],[b.roadX,b.y+16],[b.roadX,b.roadY]]})):[];
+ const accessRoad=(x,y)=>buildings.some(b=>b.access.slice(1).some(([ex,ey],i)=>{const [sx,sy]=b.access[i];return x>=Math.min(sx,ex)-17&&x<=Math.max(sx,ex)+17&&y>=Math.min(sy,ey)-17&&y<=Math.max(sy,ey)+17}));
+ const roads=(x,y)=>bridges.some(b=>Math.abs(y-b.y)<32)||Math.abs(x-416)<24||Math.abs(x-1120)<24||accessRoad(x,y);
+ const at=(tx,ty)=>{const x=tx*32+16,y=ty*32+16;if(waterField(x,y)<0)return "water";if(roads(x,y))return scene==="village"?"stone":"dirt";if(waterField(x,y)<25)return "sand";if(scene==="village"){if(buildings.some(b=>Math.abs(x-b.x)<48&&y>=b.y-16&&y<=b.y+16))return "foundation";if(x>160&&x<320&&y>250&&y<460)return "yard";if(x>1120&&x<1344&&y>550&&y<720)return "brick";if(y>770&&x<400)return "dirt";return "grass"}if(x<480&&y<510)return "forest";if(x>1070&&y<500)return "hill";if(x<440&&y>620)return "wetland";return "grass"};
+ if(scene==="village"){for(const b of buildings)add(b.id,b.x,b.y,"building",{doorX:b.doorX,roadY:b.roadY,access:b.access,wheelX:b.wheelX,wheelY:b.wheelY});for(let i=0;i<5;i++)add("fence",200+i*64,790,"fence");add("gate_closed",520,790,"gate");for(let i=0;i<4;i++)add("wall",1100+i*64,925,"fence");for(const [i,id] of ["barrel","flowers","box","notice","lamp","sign","flowerbed","bench","wood_steps","stone_steps","gate_stone","fence2","wall2"].entries())add(id,160+(i%5)*94,460+Math.floor(i/5)*205,"prop")}
  for(let y=100;y<height-40;y+=128)for(let x=90;x<width-50;x+=128){const n=hash(x,y,seed),xx=x+(n%23)-11,yy=y+((n>>>8)%23)-11;if(waterField(xx,yy)<105||roads(xx,yy)||items.some(o=>Math.hypot(o.x-xx,o.y-yy)<105))continue;if(scene==="village"&&n%3!==0)continue;add(TREE_TYPES[n%4],xx,yy,"tree")}
  const spawn={x:416,y:160};
  function blocked(x,y,open=false){if(x<10||y<10||x>width-10||y>height-10)return true;const onDeck=bridges.some(b=>x>=b.x&&x<=b.x+b.w&&Math.abs(y-b.y)<b.h/2-7);if(!onDeck&&[[-5,0],[5,0],[0,-5],[0,5],[0,0]].some(([dx,dy])=>waterField(x+dx,y+dy)<0))return true;if(bridges.some(b=>x>b.x+4&&x<b.x+b.w-4&&Math.abs(Math.abs(y-b.y)-b.h/2)<7))return true;return items.some(o=>o.type==="tree"?Math.abs(x-o.x)<12&&Math.abs(y-o.y)<11:o.type==="building"?Math.abs(x-o.x)<(o.id==="tower"?25:45)&&y>o.y-50&&y<o.y-5:o.type==="fence"||o.type==="gate"&&!open?Math.abs(x-o.x)<30&&Math.abs(y-o.y)<8:false)}
