@@ -10,7 +10,7 @@ v2.0 · 2026-11-27 · 流程基线；尚无通过评审的实际美术资产
 5. 工具脚本生成 atlas PNG + JSON、类型/尺寸/锚点/碰撞元数据及校验报告；从源资产可复现。图集按场景/季节/实体分组；初值1024或2048边长（真机预算），padding/extrude 2px、防止纹理渗色，nearest。不要每个 chunk 复制纹理。
 
 ## 目录与命名（计划）
-assets/source/{terrain,props,characters,crops,buildings,ui,audio}/；public/assets/ 仅构建产物，按内容 hash；docs/art/reference/ 存获授权或自产的批准截图与配置。ID lower_snake_case；frame 名如 tree_oak_summer_idle_00，角色 walk_south_00。图像 PNG RGBA，禁止带有半透明白边/水印/不可解释抖动。动画同动作帧尺寸一致、脚底锚点固定；动画时序独立于游戏时钟（暂停时冻结）。地表每格32px；人物32×48；大物体 footprint 独立。碰撞不从透明像素推断，显式矩形或占地格。
+assets/source/{terrain,props,characters,crops,buildings,ui,audio}/；public/assets/ 仅构建产物，按内容 hash；docs/art/reference/ 存获授权或自产的批准截图与配置。ID lower_snake_case；frame 名如 tree_oak_summer_idle_00，角色 walk_south_00。图像 PNG RGBA，禁止带有半透明白边/水印/不可解释抖动。动画同动作帧尺寸一致、脚底锚点固定；动画时序独立于游戏时钟（暂停时冻结）。地表每格32px；人物48×64（用户已确认）；大物体 footprint 独立。碰撞不从透明像素推断，显式矩形或占地格。
 元数据字段：assetId, sourceFile, atlasFrame, width, height, anchorX/Y, footprint, collision, occlusionParts, season, animations[{name,frames,fps}], licenseRef。anchor 使用源像素坐标，树/人物脚底、建筑门附近接地点，渲染时转换局部坐标。
 
 ## 资产校验
@@ -25,3 +25,6 @@ assets/source/{terrain,props,characters,crops,buildings,ui,audio}/；public/asse
 ART01–05见 DESIGN.md；固定 seed/日期/镜头截图、资产来源和版本/生成记录、图集校验、移动端截图。用户此前确认的是视觉方向，不代表样片已批准。参考图原文件目前未归档，不可伪造；实际生成的样片在 G3 实现，作为后续生产门禁。所有第三方来源先登记 THIRD_PARTY_NOTICES；AI输出也保留生成记录及服务条款，不直接承诺独占版权。
 
 建筑资产必须以DESIGN.md C26为门禁：禁止沿用此前不一致的独立建筑图；先从批准的农场/自然完整场景抽取同一套素材，在实际浏览器两人同场景验证屋顶、人物、树冠遮挡、比例、地面接缝及昼夜。先批准场景，不单独批准孤立建筑。音频、图集、原始图片授权规则不变。
+
+
+候选资产位于 assets/candidates/，必须明确待验收，不得自动引入正式 public/assets。A06-V2当前使用可见像素分区换色、独立帽子；不同轮廓服装/发型需后续真实遮挡层制作，用户验收后再转正式资产。
