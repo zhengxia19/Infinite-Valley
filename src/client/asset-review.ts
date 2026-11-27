@@ -1,8 +1,8 @@
 import * as Phaser from "phaser";
 import {makeLayout,move,SEASONS,type Layout,type Item} from "../world/asset-review-core.mjs";
-type Meta={w:number;h:number;anchor:[number,number]};
+type Meta={w:number;h:number;anchor:[number,number];page:string;frame:string};
 type Chunk={id:string;x:number;y:number;w:number;h:number};
-type Manifest={sourceCount:number;records:Record<string,Meta>;registrations:Record<string,unknown>;layouts:Record<string,{chunks:Chunk[]}>;seed:number};
+type Manifest={sourceCount:number;atlasPages:string[];records:Record<string,Meta>;registrations:Record<string,unknown>;layouts:Record<string,{chunks:Chunk[]}>;seed:number};
 const url=(path:string)=>new URL("asset-review/"+path,document.baseURI).href;
 const hud=document.getElementById("hud")!;
 export async function startAssetReview(held:Set<string>){
@@ -27,13 +27,14 @@ export async function startAssetReview(held:Set<string>){
   private initialized=false;
   constructor(){super("asset-review")}
   preload(){
-   for(const id of Object.keys(manifest.records))this.load.image(id,url("sprites/"+id+".png"));
+   for(const id of manifest.atlasPages)this.load.atlas(id,url("atlas/"+id+".png"),url("atlas/"+id+".json"));
    for(const data of Object.values(manifest.layouts))for(const c of data.chunks)this.load.image(c.id,url("terrain/"+c.id+".png"));
    this.load.spritesheet("approved-actor",url("actor.png"),{frameWidth:48,frameHeight:64});
    this.load.on("loaderror",(file:{key:string})=>{hud.textContent="素材加载失败："+file.key;this.initialized=false});
   }
   private image(id:string,x:number,y:number,depth:number,originY=1){
-   const obj=this.add.image(Math.round(x),Math.round(y),id).setOrigin(.5,originY).setDepth(depth);
+   const m=manifest.records[id];if(!m)throw Error("missing sprite "+id);
+   const obj=this.add.image(Math.round(x),Math.round(y),m.page,m.frame).setOrigin(.5,originY).setDepth(depth);
    this.layerObjects.push(obj);return obj;
   }
   private makeProp(item:Item){
@@ -56,12 +57,12 @@ export async function startAssetReview(held:Set<string>){
   }
   private resetPosition(){this.px=this.layout.spawn.x;this.py=this.layout.spawn.y;this.target=null;this.cameras.main.centerOn(this.px,this.py)}
   create(){
-   if(!Object.keys(manifest.records).every(id=>this.textures.exists(id))||!this.textures.exists("approved-actor")||!Object.values(manifest.layouts).every(l=>l.chunks.every(c=>this.textures.exists(c.id)))){hud.textContent="实际素材加载不完整";return}
+   if(!Object.values(manifest.records).every(m=>this.textures.exists(m.page)&&this.textures.get(m.page).has(m.frame))||!this.textures.exists("approved-actor")||!Object.values(manifest.layouts).every(l=>l.chunks.every(c=>this.textures.exists(c.id)))){hud.textContent="实际素材加载不完整";return}
    this.player=this.add.sprite(0,0,"approved-actor",0).setOrigin(.5,61/64);
    this.build();this.initialized=true;hud.dataset.reviewReady="true";
-   scene.onchange=()=>this.build();season.onchange=()=>{for(const p of this.props){if(p.item.type!=="tree")continue;const id=p.item.id+"_"+season.value,layered=!!manifest.registrations[id];p.lower.setTexture(layered?id+"_lower":id);if(p.upper){this.layerObjects=this.layerObjects.filter(o=>o!==p.upper);p.upper.destroy()}p.upper=layered?this.image(id+"_upper",p.item.x,p.item.y,p.item.y+.25):undefined}};
+   scene.onchange=()=>this.build();season.onchange=()=>{for(const p of this.props){if(p.item.type!=="tree")continue;const id=p.item.id+"_"+season.value,layered=!!manifest.registrations[id];const m=manifest.records[layered?id+"_lower":id];p.lower.setTexture(m.page,m.frame);if(p.upper){this.layerObjects=this.layerObjects.filter(o=>o!==p.upper);p.upper.destroy()}p.upper=layered?this.image(id+"_upper",p.item.x,p.item.y,p.item.y+.25):undefined}};
    zoom.onchange=()=>this.cameras.main.setZoom(Number(zoom.value));
-   gate.onclick=()=>{this.open=!this.open;gate.textContent=this.open?"关闭围栏门":"开启围栏门";for(const p of this.props)if(p.item.type==="gate")p.lower.setTexture(this.open?"gate_open":"gate_closed")};
+   gate.onclick=()=>{this.open=!this.open;gate.textContent=this.open?"关闭围栏门":"开启围栏门";for(const p of this.props)if(p.item.type==="gate"){const m=manifest.records[this.open?"gate_open":"gate_closed"];p.lower.setTexture(m.page,m.frame)}};
    reset.onclick=()=>this.resetPosition();
    this.input.on("pointerdown",(pointer:Phaser.Input.Pointer)=>{const p=this.cameras.main.getWorldPoint(pointer.x,pointer.y);this.target={x:p.x,y:p.y}});
   }

@@ -2,6 +2,9 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import {readFileSync} from "node:fs";
 import {createHash} from "node:crypto";
+import {fileURLToPath} from "node:url";
+import {approvedComponents} from "../tools/art/approved_components_v1/archive.mjs";
+import {packSprites} from "../tools/art/approved_components_v1/atlas.mjs";
 import {decodePNG} from "../tools/art/placement_v3/png.mjs";
 import {blank,paste,cleanSprite,alignParts,renderTerrain,makeLayout,move,MATERIALS,SEASONS,TREE_TYPES} from "../src/world/asset-review-core.mjs";
 const input=readFileSync(new URL("../tools/art/approved_components_v1/approved_review.html",import.meta.url));
@@ -32,4 +35,24 @@ test("building access routes, mill bank and dry bridge portals",()=>{
  assert(l.waterField(mill.wheelX,mill.wheelY)<=0,"wheel should contact river");
  assert(l.waterField(mill.x+40,mill.y-25)>=0,"building collision footprint must stay on dry land");
  for(const scene of ["village","nature"]){const a=makeLayout(scene);for(const b of a.bridges)for(let y=b.y-24;y<=b.y+24;y+=4)for(const x of [b.x+8,b.x+b.w-8])assert(a.waterField(x,y)>=0,b.kind+" wet portal")}
+});
+
+test("archived binary PNGs match the approved HTML source byte for byte",async()=>{
+ const a=await approvedComponents(fileURLToPath(new URL("../",import.meta.url)));
+ assert.equal(Object.keys(a.images).length,163);
+ for(const [id,bytes] of Object.entries(a.images))assert(bytes.equals(Buffer.from(urls[id].split(",")[1],"base64")),id);
+});
+test("1024px atlas preserves every pixel, frame padding and nonoverlap",()=>{
+ const atlas=packSprites(images);assert.equal(Object.keys(atlas.records).length,163);
+ for(const p of atlas.pages){
+  const used=new Uint8Array(1024*1024);
+  for(const [id,{frame:f}] of Object.entries(p.frames)){
+   assert(f.x>=2&&f.y>=2&&f.x+f.w+2<=1024&&f.y+f.h+2<=1024,id);const im=images[id];
+   for(let j=-2;j<f.h+2;j++)for(let i=-2;i<f.w+2;i++){
+    const n=(f.y+j)*1024+f.x+i;assert.equal(used[n],0,"overlap "+id);used[n]=1;
+    const s=(Math.max(0,Math.min(f.h-1,j))*im.w+Math.max(0,Math.min(f.w-1,i)))*4;
+    for(let c=0;c<4;c++)assert.equal(p.image.rgba[n*4+c],im.rgba[s+c],id);
+   }
+  }
+ }
 });
