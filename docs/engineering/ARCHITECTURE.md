@@ -8,7 +8,7 @@ src/client（Phaser/DOM/预测/Worker）、src/server（唯一WorldRoom/auth/ses
 数据库唯一active worldId+worldEpoch，管理员CLI显式创建，Seed及生成器版本固定。服务启动只加载既有世界，空库拒绝普通加入；关闭autoDispose，禁止客户端joinOrCreate、满员新建room或自动重建；进程锁防双写。所有人类AI共享全球整数坐标。底图F(seed,version,x,y)+权威共享delta；同一个坐标只存在一份实际状态。房屋内部只是同世界空间实例。正式世界与隔离测试数据库不可混用。D28管理生命周期。
 ## 调度与命令
 服务器20Hz固定步进初值，权威脚底碰撞/4tile/s移动速度；客户端30/60FPS预测插值。移动意图20Hz、300ms失效归零；失焦/断线/夺回控制权取消未提交动作。全局时钟1现实秒=1游戏分钟，有有效在线角色才推进，无人/维护/停机暂停；严重阻塞暂停维护不跳过日界。NPC2–5Hz、农业日界结算、纯装饰客户端执行。
-CommandEnvelope {protocolVersion,worldEpoch,sessionId,controllerEpoch,commandId,seq,kind,args,expectedRevision?}；身份来自连接，不信任payload玩家ID。持久命令串行预检、原子事务、提交后ACK，幂等receipt；旧epoch/重复冲突/权限/速率不合法拒绝。移动不逐帧落盘；经济/建造/采集/ACL/交易/日界立即持久。服务器接收顺序解决资源竞争。客户端预测不得改库存。
+CommandEnvelope {protocolVersion,worldEpoch,controllerEpoch,commandId,seq,kind,args,expectedRevision?}；身份来自连接，不信任payload玩家ID。持久命令串行预检、原子事务、提交后ACK，幂等receipt；旧epoch/重复冲突/权限/速率不合法拒绝。移动不逐帧落盘；经济/建造/采集/ACL/交易/日界立即持久。服务器接收顺序解决资源竞争。客户端预测不得改库存。
 ## 空间兴趣管理 AOI
 每角色基础3×3活跃/5×5加载、视口上限49；服务器计算所有玩家范围并集及引用计数，重叠模拟一次，远区卸载；注册者离线资产按全局时间惰性结算，不遍历无限地图。Colyseus Schema仅全局小元数据，附近实体/地块通过显式定向snapshot/delta/event，私有库存/箱子/权限只发授权客户端，不广播全世界。chunkRevision缺口请求对应chunk全量；worldEpoch旧包丢弃。客户端Worker可重建公开base、路径规划、装饰，不能创造资源；服务器权威生成器验证占地/资源。服务器Region LRU、未提交dirty不得驱逐。局部坐标rebase避免GPU精度问题。出生公共区不可圈占；所有玩家在同坐标相遇。公开seed可被外部分析，不承诺地貌保密，正式观察API不主动暴露未探索资源。
 ## 网络与控制
