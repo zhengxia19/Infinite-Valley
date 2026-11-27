@@ -1,0 +1,68 @@
+{
+  "results": [
+    {
+      "name": "bridge_vertical",
+      "actorPosition": [
+        14,
+        -10
+      ],
+      "foot": [
+        38,
+        51
+      ],
+      "insideDeck": true,
+      "actorOverlapPixels": 27,
+      "changedPixels": 27,
+      "drawOrder": [
+        "back_rail",
+        "deck",
+        "actor",
+        "front_rail"
+      ]
+    },
+    {
+      "name": "rope_bridge",
+      "actorPosition": [
+        54,
+        -4
+      ],
+      "foot": [
+        78,
+        57
+      ],
+      "insideDeck": true,
+      "actorOverlapPixels": 115,
+      "changedPixels": 115,
+      "drawOrder": [
+        "back_rail",
+        "deck",
+        "actor",
+        "front_rail"
+      ]
+    },
+    {
+      "name": "garden_bridge",
+      "actorPosition": [
+        24,
+        20
+      ],
+      "foot": [
+        48,
+        81
+      ],
+      "insideDeck": true,
+      "actorOverlapPixels": 23,
+      "changedPixels": 23,
+      "drawOrder": [
+        "back_rail",
+        "deck",
+        "actor",
+        "front_rail"
+      ]
+    }
+  ],
+  "previewSHA": "d19274bc39be89d11bbfdb6d0ae3413759379247",
+  "limitations": [
+    "固定脚底位置，非实时移动"
+  ]
+}
