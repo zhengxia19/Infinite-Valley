@@ -1,0 +1,43 @@
+{
+  "results": [
+    {
+      "name": "cottage",
+      "mode": "behind",
+      "actorOverlapPixels": 984,
+      "changedPixels": 984,
+      "drawOrder": [
+        "actor",
+        "base",
+        "roof"
+      ]
+    },
+    {
+      "name": "oak_mature",
+      "mode": "behind",
+      "actorOverlapPixels": 918,
+      "changedPixels": 984,
+      "drawOrder": [
+        "actor",
+        "trunk",
+        "canopy"
+      ]
+    },
+    {
+      "name": "stone_arch_bridge",
+      "mode": "on_bridge",
+      "actorOverlapPixels": 202,
+      "changedPixels": 202,
+      "drawOrder": [
+        "back_rail",
+        "deck",
+        "actor",
+        "front_rail"
+      ]
+    }
+  ],
+  "previewSHA": "6933fba92c0044a8621fd39a8ab23004fa6ab78e",
+  "limitations": [
+    "三种离线遮挡夹具，固定人物位置；非实时移动",
+    "真实层来自可见像素，不支持任意移除图层后重建隐蔽面"
+  ]
+}
