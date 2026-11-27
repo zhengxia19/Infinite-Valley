@@ -1,37 +1,48 @@
 {
   "batch": "approved_components_v1",
   "verified": "2026-11-27",
-  "status": "raw master files available in conversation; not committed",
+  "status": "archived: five master PNGs committed under assets/source/environment/approved_components_v1/masters/; per-file SHA-256 and byte counts verified against SHA256SUMS.txt and this manifest",
+  "archived": "2026-11-27",
   "masters": [
     {
       "plannedName": "terrain_ground.png",
       "bytes": 3518517,
       "sha256": "c9521d2b8ea7ce0b884403d16fce6a6de1f75a89715c93b4b398b9b495370622",
-      "generationId": "cea09422-4799-4322-826c-591d1501b20f"
+      "generationId": "cea09422-4799-4322-826c-591d1501b20f",
+      "path": "assets/source/environment/approved_components_v1/masters/terrain_ground.png",
+      "archived": true
     },
     {
       "plannedName": "building_components.png",
       "bytes": 2125872,
       "sha256": "c0f237dc220d761c467966b2ed2338e6b4e3b221b5f3da83ecaa08fd4a90ddcc",
-      "generationId": "17dbe840-3a4d-429f-b739-ad490120a520"
+      "generationId": "17dbe840-3a4d-429f-b739-ad490120a520",
+      "path": "assets/source/environment/approved_components_v1/masters/building_components.png",
+      "archived": true
     },
     {
       "plannedName": "bridge_modules.png",
       "bytes": 2423708,
       "sha256": "246ae11612f9aa55150bb014fc011762b5d15f96590466173c4966464143af97",
-      "generationId": "6be6ecc0-6c28-4f33-bd50-61be6ca4ac04"
+      "generationId": "6be6ecc0-6c28-4f33-bd50-61be6ca4ac04",
+      "path": "assets/source/environment/approved_components_v1/masters/bridge_modules.png",
+      "archived": true
     },
     {
       "plannedName": "trees_refined.png",
       "bytes": 3079098,
       "sha256": "c680272241bfa2bb5e1f2de3ab8cc67a8115adcce74ecca75179896ab3db3ff0",
-      "generationId": "b0e623c8-694c-4c35-8452-cf13626505dd"
+      "generationId": "b0e623c8-694c-4c35-8452-cf13626505dd",
+      "path": "assets/source/environment/approved_components_v1/masters/trees_refined.png",
+      "archived": true
     },
     {
       "plannedName": "fences_and_props.png",
       "bytes": 2220293,
       "sha256": "ff3e2433bb8f8c6c0028e2d74e1fa9a1d1d98fb0fcd67a1209ef8964fd64adfc",
-      "generationId": "375eae05-6a9e-4085-84f8-d9b842e93847"
+      "generationId": "375eae05-6a9e-4085-84f8-d9b842e93847",
+      "path": "assets/source/environment/approved_components_v1/masters/fences_and_props.png",
+      "archived": true
     }
   ]
 }

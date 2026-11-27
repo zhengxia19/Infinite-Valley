@@ -57,3 +57,6 @@ masters_v1 = assets/source/environment/masters_v1；environment_v1 = assets/cand
 - 运行素材自动构建199个组件，含18种对象的36张上下遮挡层、2张1024×1024图集（2px扩边）、48个256px地形区块及已批准人物。生成产物不重复提交，运行预览路径 `/?review=1`；Phaser浏览器测试已通过，详见环境实施记录。
 - 五张完整生成母版在当前会话中逐字节重新校验，精确字节数、SHA-256、生成ID、计划文件名记录于 `assets/source/environment/approved_components_v1/masters_manifest.json`。本次未能从隔离的本地容器向GitHub传输这五张大PNG原文件，不能把163张裁切PNG归档等同母版归档。初版未确认树木不纳入正式资产。
 - 原视觉确认有效；自动配准隐藏面仍近似、尚未覆盖全部原稿元素及每一资产ID的实际场景状态；真实硬件性能、所有图层视觉精修和共享世界正式集成未完成。禁止标记D09/G3最终门禁通过。
+
+## 五组母版原图归档（2026-11-27）
+五张用户视觉确认的完整母版PNG已按原字节无损归档至 `assets/source/environment/approved_components_v1/masters/`：`terrain_ground.png`、`building_components.png`、`bridge_modules.png`、`trees_refined.png`、`fences_and_props.png`。逐文件SHA-256与字节数同交付包SHA256SUMS.txt及 `masters_manifest.json` 既有记录逐一核验一致，树木使用已确认重制版（生成ID b0e623c8-694c-4c35-8452-cf13626505dd），未纳入未确认初版树木。未重新生成、裁切、压缩或重新编码，未使用Git LFS；163个裁切组件（components.zip）归档保持不变。母版归档完成不等同D09/G3正式引擎门禁通过：配准与透明边缘精修、地形接缝、实际Phaser场景验收、真实角色通行碰撞遮挡及真机性能仍未完成。

@@ -38,3 +38,6 @@ V4离线对照图以硬编码ends数组估算道路终点，桥图按画布中�
 - 实际CI日志：[优化前](https://github.com/zhengxia19/Infinite-Valley/actions/runs/45947510475)：10项通过，启动1450ms，22.58FPS，p95 66.7ms；[优化后](https://github.com/zhengxia19/Infinite-Valley/actions/runs/45947754984)：12项通过，启动680ms，29.71FPS，p95 50ms；[实际遮挡回归](https://github.com/zhengxia19/Infinite-Valley/actions/runs/45947839575)（1a6ddc0）：12项通过、类型检查/Vite构建/Chromium交互成功，启动593ms，跨桥角色x=920.96，树冠遮挡数1且退出后清除，45.22FPS，p95 33.4ms，无页面异常。后两次不同runner单轮结果存在波动，不代表稳定帧率或真实PC/Android达标。报告/截图在CI artifact内部，截图不是用户验收交付物。
 - 本地仓库运行 `npm install`、`npm run dev` 后打开 `http://127.0.0.1:5173/?review=1`；需具备npm联网环境。此次没有部署公网地址，不宣称用户端可直接访问远程实时场景。
 - 剩余：五张母版原文件入库、自动配准隐藏面人工精修、全部资产与桥栏/冬季无叶枝条覆盖验证、真机触屏与D12性能预算、正式共享世界与服务器权威碰撞。所有既有用户视觉批准仍有效，不扩大为正式世界验收。
+
+## 五组母版原图归档（2026-11-27）
+五张完整母版已按原字节归档至 `assets/source/environment/approved_components_v1/masters/`：`terrain_ground.png`、`building_components.png`、`bridge_modules.png`、`trees_refined.png`、`fences_and_props.png`。逐文件SHA-256与字节数同交付包SHA256SUMS.txt及 `masters_manifest.json` 既有记录核验一致，推送后已从远端main的Git对象重新读取五张PNG逐字节复验SHA-256。未重新生成、裁切、压缩或重新编码，未使用Git LFS。剩余清单中"五张母版原文件入库"一项已完成；其余剩余项（自动配准隐藏面人工精修、全部资产与桥栏/冬季无叶枝条覆盖验证、真机触屏与D12性能预算、正式共享世界与服务器权威碰撞）状态不变。母版归档不等同D09/G3正式引擎门禁通过。
