@@ -17,8 +17,22 @@ try{
  await page.getByRole("combobox",{name:"缩放"}).selectOption("2");await page.waitForFunction(()=>document.querySelector("#hud").dataset.zoom==="2");
  await page.getByRole("button",{name:"开启围栏门"}).click();await page.waitForFunction(()=>document.querySelector("#hud").dataset.gate==="true");
  await page.getByRole("combobox",{name:"场景"}).selectOption("nature");await page.waitForFunction(()=>document.querySelector("#hud").dataset.scene==="nature");
+ // Exercise real foreground fade with the approved character moving behind a tree.
+ await page.getByRole("combobox",{name:"季节"}).selectOption("summer");
+ await page.getByRole("combobox",{name:"缩放"}).selectOption("1");
+ await page.getByRole("button",{name:"回到起点"}).click();
+ await page.waitForFunction(()=>{const h=document.querySelector("#hud").dataset;return h.scene==="nature"&&h.season==="summer"&&h.zoom==="1"&&Number(h.x)===416&&Number(h.y)===160});
+ const box=await page.locator("canvas").boundingBox();assert(box);
+ await page.mouse.click(box.x+475/960*box.width,box.y+189/640*box.height);
+ await page.waitForFunction(()=>{const h=document.querySelector("#hud").dataset;return Math.hypot(Number(h.x)-475,Number(h.y)-189)<5&&Number(h.occluded)>0},{},{timeout:12000});
+ const occluded=Number(await hud.getAttribute("data-occluded"));assert(occluded>0);
+ await page.getByRole("button",{name:"回到起点"}).click();
+ await page.waitForFunction(()=>Number(document.querySelector("#hud").dataset.occluded)===0);
+ await page.getByRole("combobox",{name:"季节"}).selectOption("winter");
+ await page.getByRole("combobox",{name:"缩放"}).selectOption("2");
+ await page.waitForFunction(()=>{const h=document.querySelector("#hud").dataset;return h.season==="winter"&&h.zoom==="2"});
  const stats=await page.evaluate(()=>new Promise(resolve=>{const start=performance.now();let frames=0,prev=start,dt=[];function frame(t){if(frames++)dt.push(t-prev);prev=t;if(t-start<2000)requestAnimationFrame(frame);else resolve({fps:(frames-1)*1000/(t-start),p95Ms:dt.sort((a,b)=>a-b)[Math.floor(dt.length*.95)]})}requestAnimationFrame(frame)}));
  assert.equal(errors.length,0,errors.join("\n"));await mkdir("test-results/asset-review",{recursive:true});
  await page.screenshot({path:"test-results/asset-review/nature.png"});
- await writeFile("test-results/asset-review/report.json",JSON.stringify({readyMs,crossedX,scene:"nature",season:"winter",zoom:2,errors,stats},null,2)+"\n");console.log({readyMs,crossedX,stats,errors});
+ await writeFile("test-results/asset-review/report.json",JSON.stringify({readyMs,crossedX,scene:"nature",season:"winter",zoom:2,occluded,occlusionCleared:true,errors,stats},null,2)+"\n");console.log({readyMs,crossedX,occluded,occlusionCleared:true,stats,errors});
 }finally{await browser?.close();server.kill()}
