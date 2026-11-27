@@ -56,17 +56,3 @@ test("1024px atlas preserves every pixel, frame padding and nonoverlap",()=>{
   }
  }
 });
-
-import {drawCrop} from "../assets/candidates/crops_v1/draw.mjs";
-test("crop candidate source has 20 exact independent native-pixel frames in the village",()=>{
- const manifest=JSON.parse(readFileSync(new URL("../assets/candidates/crops_v1/manifest.json",import.meta.url),"utf8"));
- const sheet=decodePNG(readFileSync(new URL("../assets/candidates/crops_v1/crops.png",import.meta.url)));
- assert.equal(sheet.w,160);assert.equal(sheet.h,192);assert.equal(manifest.records.length,20);
- const l=makeLayout("village"),items=l.items.filter(o=>o.type==="crop");
- assert.equal(items.length,20);assert.equal(makeLayout("nature").items.filter(o=>o.type==="crop").length,0);
- const ids=new Set(),hashes=new Set();
- for(const f of manifest.records){assert(!ids.has(f.id));ids.add(f.id);const [,id,stage]=f.id.split("_");const im=drawCrop(id,Number(stage));assert.deepEqual(f.anchor,[16,48]);assert.equal(im.rgba.filter((v,i)=>i%4===3&&v===255).length,f.pixels);
- for(let y=0;y<48;y++){const p=((f.y+y)*sheet.w+f.x)*4;assert.deepEqual(sheet.rgba.subarray(p,p+128),im.rgba.subarray(y*128,y*128+128))}
- hashes.add(createHash("sha256").update(im.rgba).digest("hex"));const item=items.find(o=>o.id===f.id);assert(item);assert.equal(l.at(Math.floor(item.x/32),Math.floor((item.y-1)/32)),"dirt");assert(!l.blocked(item.x,item.y))}
- assert.equal(hashes.size,20);
-});

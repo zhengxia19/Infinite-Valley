@@ -2,7 +2,7 @@ import * as Phaser from "phaser";
 import {makeLayout,move,SEASONS,type Layout,type Item} from "../world/asset-review-core.mjs";
 type Meta={w:number;h:number;anchor:[number,number];page:string;frame:string};
 type Chunk={id:string;x:number;y:number;w:number;h:number};
-type Manifest={cropBatch:string;cropCount:number;sourceCount:number;atlasPages:string[];records:Record<string,Meta>;registrations:Record<string,unknown>;layouts:Record<string,{chunks:Chunk[]}>;seed:number};
+type Manifest={sourceCount:number;atlasPages:string[];records:Record<string,Meta>;registrations:Record<string,unknown>;layouts:Record<string,{chunks:Chunk[]}>;seed:number};
 const url=(path:string)=>new URL("asset-review/"+path,document.baseURI).href;
 const hud=document.getElementById("hud")!;
 export async function startAssetReview(held:Set<string>){
@@ -17,7 +17,6 @@ export async function startAssetReview(held:Set<string>){
  const season=select("季节",SEASONS.map((s,i)=>[s,["春季","夏季","秋季","冬季"][i]]));season.value="summer";
  const zoom=select("缩放",[["1","1×"],["2","2×"],["3","3×"]]);
  const gate=document.createElement("button");gate.textContent="开启围栏门";gate.style.fontSize="14px";controls.append(gate);
- const farm=document.createElement("button");farm.textContent="查看农田样片";farm.style.fontSize="14px";controls.append(farm);
  const reset=document.createElement("button");reset.textContent="回到起点";reset.style.fontSize="14px";controls.append(reset);
  document.body.append(controls);
  class Review extends Phaser.Scene{
@@ -65,7 +64,6 @@ export async function startAssetReview(held:Set<string>){
    zoom.onchange=()=>this.cameras.main.setZoom(Number(zoom.value));
    gate.onclick=()=>{this.open=!this.open;gate.textContent=this.open?"关闭围栏门":"开启围栏门";for(const p of this.props)if(p.item.type==="gate"){const m=manifest.records[this.open?"gate_open":"gate_closed"];p.lower.setTexture(m.page,m.frame)}};
    reset.onclick=()=>this.resetPosition();
-   farm.onclick=()=>{if(scene.value!=="village"){scene.value="village";this.build()}this.px=224;this.py=200;this.target=null;this.cameras.main.centerOn(this.px,this.py)};
    this.input.on("pointerdown",(pointer:Phaser.Input.Pointer)=>{const p=this.cameras.main.getWorldPoint(pointer.x,pointer.y);this.target={x:p.x,y:p.y}});
   }
   update(_time:number,delta:number){
@@ -81,8 +79,8 @@ export async function startAssetReview(held:Set<string>){
    this.player.setFrame(this.direction*12+f).setPosition(Math.round(this.px),Math.round(this.py)).setDepth(this.py+.1);
    for(const p of this.props){if(!p.upper)continue;const near=this.py<p.item.y&&this.py>p.item.y-p.upper.height&&Math.abs(this.px-p.item.x)<p.upper.width/2; p.upper.setAlpha(near?.45:1)}
    this.cameras.main.centerOn(Math.round(this.px),Math.round(this.py));
-   hud.dataset.cropCount=String(this.props.filter(p=>p.item.type==="crop").length);hud.dataset.scene=scene.value;hud.dataset.season=season.value;hud.dataset.x=String(this.px);hud.dataset.y=String(this.py);hud.dataset.gate=String(this.open);hud.dataset.zoom=zoom.value;hud.dataset.frame=String(this.direction*12+f);hud.dataset.occluded=String(this.props.filter(p=>p.upper&&p.upper.alpha<1).length);
-   hud.textContent="环境素材 Phaser 验收预览（非正式世界）\n"+scene.value+" · "+season.value+" · "+manifest.sourceCount+" 个环境源组件 · "+manifest.cropCount+" 个作物候选\n农田自上而下：萝卜、黄瓜、胡萝卜、菠菜；从左至右五阶段\n坐标 "+Math.round(this.px)+", "+Math.round(this.py)+" · WASD / 方向键 / 触屏";
+   hud.dataset.scene=scene.value;hud.dataset.season=season.value;hud.dataset.x=String(this.px);hud.dataset.y=String(this.py);hud.dataset.gate=String(this.open);hud.dataset.zoom=zoom.value;hud.dataset.frame=String(this.direction*12+f);hud.dataset.occluded=String(this.props.filter(p=>p.upper&&p.upper.alpha<1).length);
+   hud.textContent="环境素材 Phaser 验收预览（非正式世界）\n"+scene.value+" · "+season.value+" · "+manifest.sourceCount+" 个源组件\n坐标 "+Math.round(this.px)+", "+Math.round(this.py)+" · WASD / 方向键 / 触屏";
   }
  }
  return new Phaser.Game({type:Phaser.AUTO,parent:"game",width:960,height:640,backgroundColor:"#38563a",pixelArt:true,scale:{mode:Phaser.Scale.FIT,autoCenter:Phaser.Scale.CENTER_BOTH},scene:[Review]});
